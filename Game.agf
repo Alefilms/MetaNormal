@@ -19,7 +19,7 @@
       <LetterboxMode>False</LetterboxMode>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <PixelPerfect>True</PixelPerfect>
-      <WhenInterfaceDisabled>TurnOff</WhenInterfaceDisabled>
+      <WhenInterfaceDisabled>Unchanged</WhenInterfaceDisabled>
       <GUIAlphaStyle>MultiplyTranslucenceSrcBlend</GUIAlphaStyle>
       <SpriteAlphaStyle>Improved</SpriteAlphaStyle>
       <RunGameLoopsWhileDialogOptionsDisplayed>True</RunGameLoopsWhileDialogOptionsDisplayed>
@@ -807,6 +807,229 @@
               </GUIInventory>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>280</Height>
+              <Width>400</Width>
+              <Left>440</Left>
+              <Top>220</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>3</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>70</Transparency>
+              <BackgroundColor>50719</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>3</ID>
+              <Name>gMenu</Name>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <OnClick />
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>GUARDAR</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>320</Width>
+                <Left>40</Left>
+                <Top>10</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Button1</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick />
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>CARGAR</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>320</Width>
+                <Left>40</Left>
+                <Top>55</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>Button2</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick />
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>OPCIONES</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>320</Width>
+                <Left>40</Left>
+                <Top>100</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>Button3</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BResumir_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>RESUMIR</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>320</Width>
+                <Left>40</Left>
+                <Top>235</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name>BResumir</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BSalir_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>SALIR</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>320</Width>
+                <Left>40</Left>
+                <Top>145</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name>BSalir</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>720</Height>
+              <Width>1280</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>2</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>100</Transparency>
+              <BackgroundColor>32</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>4</ID>
+              <Name>gFade</Name>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>125</Height>
+              <Width>320</Width>
+              <Left>480</Left>
+              <Top>298</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>4</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>50719</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>5</ID>
+              <Name>gConfirmacionDeSalir</Name>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <OnClick>BNo_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>No</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>100</Width>
+                <Left>170</Left>
+                <Top>70</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>BNo</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BSi_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>2016</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Si</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>100</Width>
+                <Left>40</Left>
+                <Top>70</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>BSi</Name>
+              </GUIButton>
+              <GUILabel>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">¿Seguro quieres salir?</Text>
+                <Height>36</Height>
+                <Locked>False</Locked>
+                <Width>240</Width>
+                <Left>40</Left>
+                <Top>20</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>Label1</Name>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1110,7 +1333,7 @@
             <StartX>160</StartX>
             <StartY>120</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
-            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeed>19</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
             <AnimationDelay>4</AnimationDelay>
@@ -1284,31 +1507,31 @@
     <Fonts>
       <Font>
         <ID>0</ID>
-        <PointSize>0</PointSize>
+        <PointSize>10</PointSize>
         <Name xml:space="preserve">Font 0</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename />
+        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
       <Font>
         <ID>1</ID>
-        <PointSize>0</PointSize>
+        <PointSize>10</PointSize>
         <Name xml:space="preserve">Font 1</Name>
         <OutlineFont>2</OutlineFont>
         <OutlineStyle>UseOutlineFont</OutlineStyle>
-        <SourceFilename />
+        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
       <Font>
         <ID>2</ID>
-        <PointSize>0</PointSize>
+        <PointSize>10</PointSize>
         <Name xml:space="preserve">Font 2</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename />
+        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
