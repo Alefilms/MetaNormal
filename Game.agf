@@ -73,7 +73,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>MetaNormal</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>4</AudioIndexer>
+      <AudioIndexer>5</AudioIndexer>
       <BuildTargets>Windows</BuildTargets>
       <RenderAtScreenResolution>UserDefined</RenderAtScreenResolution>
     </Settings>
@@ -641,6 +641,18 @@
             <Number>2</Number>
             <Description IsNull="True" />
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>3</Number>
+            <Description IsNull="True" />
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>4</Number>
+            <Description IsNull="True" />
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>5</Number>
+            <Description IsNull="True" />
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -1030,6 +1042,90 @@
               </GUILabel>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>280</Height>
+              <Width>400</Width>
+              <Left>400</Left>
+              <Top>380</Top>
+              <Clickable>True</Clickable>
+              <Visibility>Normal</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>6</ID>
+              <Name>gMenuInicio</Name>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <OnClick>BNuevaPartida_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text xml:space="preserve">Nueva partida</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>320</Width>
+                <Left>40</Left>
+                <Top>15</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>BNuevaPartida</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick />
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text xml:space="preserve">Cargar partida</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>320</Width>
+                <Left>40</Left>
+                <Top>75</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>BCargarPartidaInicio</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BSalirInicio_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text xml:space="preserve">Salir del juego</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>320</Width>
+                <Left>40</Left>
+                <Top>135</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>BSalirInicio</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1289,7 +1385,7 @@
             <IdleView>0</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>4</StartingRoom>
             <StartX>500</StartX>
             <StartY>500</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -3423,6 +3519,18 @@
                 <DefaultPriority>Inherit</DefaultPriority>
                 <DefaultRepeat>Inherit</DefaultRepeat>
                 <FileLastModifiedDate>2018-07-31 16:20:50Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <ScriptName>aMusic4</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music4.mp3</SourceFileName>
+                <Index>5</Index>
+                <Type>2</Type>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <FileType>MP3</FileType>
+                <DefaultVolume>-1</DefaultVolume>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <FileLastModifiedDate>2018-07-31 16:21:02Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
