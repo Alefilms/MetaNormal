@@ -839,7 +839,7 @@
             </NormalGUI>
             <Controls>
               <GUIButton>
-                <OnClick />
+                <OnClick>BGuardarMenu_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -857,7 +857,7 @@
                 <Top>10</Top>
                 <ZOrder>0</ZOrder>
                 <ID>0</ID>
-                <Name>Button1</Name>
+                <Name>BGuardarMenu</Name>
               </GUIButton>
               <GUIButton>
                 <OnClick />
@@ -875,7 +875,7 @@
                 <Locked>True</Locked>
                 <Width>320</Width>
                 <Left>40</Left>
-                <Top>55</Top>
+                <Top>65</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
                 <Name>Button2</Name>
@@ -896,7 +896,7 @@
                 <Locked>True</Locked>
                 <Width>320</Width>
                 <Left>40</Left>
-                <Top>100</Top>
+                <Top>120</Top>
                 <ZOrder>2</ZOrder>
                 <ID>2</ID>
                 <Name>Button3</Name>
@@ -917,7 +917,7 @@
                 <Locked>True</Locked>
                 <Width>320</Width>
                 <Left>40</Left>
-                <Top>235</Top>
+                <Top>230</Top>
                 <ZOrder>3</ZOrder>
                 <ID>3</ID>
                 <Name>BResumir</Name>
@@ -938,7 +938,7 @@
                 <Locked>True</Locked>
                 <Width>320</Width>
                 <Left>40</Left>
-                <Top>145</Top>
+                <Top>175</Top>
                 <ZOrder>4</ZOrder>
                 <ID>4</ID>
                 <Name>BSalir</Name>
@@ -1125,6 +1125,179 @@
                 <Name>BSalirInicio</Name>
               </GUIButton>
             </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>480</Height>
+              <Width>853</Width>
+              <Left>213</Left>
+              <Top>120</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>4</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>50719</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>7</ID>
+              <Name>gGuardar</Name>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">Guarda tu Partida</Text>
+                <Height>37</Height>
+                <Locked>False</Locked>
+                <Width>283</Width>
+                <Left>21</Left>
+                <Top>22</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Label2</Name>
+              </GUILabel>
+              <GUITextBox>
+                <OnActivate>TxtNuevoGuardado_OnActivate</OnActivate>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <ShowBorder>True</ShowBorder>
+                <Text />
+                <Height>30</Height>
+                <Locked>False</Locked>
+                <Width>290</Width>
+                <Left>21</Left>
+                <Top>65</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>TxtNuevoGuardado</Name>
+              </GUITextBox>
+              <GUIListBox>
+                <OnSelectionChanged>ListaDeGuardado_OnSelectionChanged</OnSelectionChanged>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <ShowBorder>True</ShowBorder>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>0</TextColor>
+                <SelectedTextColor>7</SelectedTextColor>
+                <SelectedBackgroundColor>16</SelectedBackgroundColor>
+                <Font>0</Font>
+                <Translated>True</Translated>
+                <Height>333</Height>
+                <Locked>False</Locked>
+                <Width>291</Width>
+                <Left>21</Left>
+                <Top>99</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>ListaDeGuardado</Name>
+              </GUIListBox>
+              <GUIButton>
+                <OnClick>BGuardar_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Guardar</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>140</Width>
+                <Left>330</Left>
+                <Top>382</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name>BGuardar</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BCancelarGuardado_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Cancelar</Text>
+                <Height>35</Height>
+                <Locked>False</Locked>
+                <Width>140</Width>
+                <Left>513</Left>
+                <Top>382</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name>BCancelarGuardado</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BBorrar_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Borrar</Text>
+                <Height>35</Height>
+                <Locked>False</Locked>
+                <Width>140</Width>
+                <Left>691</Left>
+                <Top>382</Top>
+                <ZOrder>5</ZOrder>
+                <ID>5</ID>
+                <Name>BBorrar</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick />
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text />
+                <Height>335</Height>
+                <Locked>False</Locked>
+                <Width>500</Width>
+                <Left>330</Left>
+                <Top>22</Top>
+                <ZOrder>6</ZOrder>
+                <ID>6</ID>
+                <Name>BScreenShot</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>200</Height>
+              <Width>300</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>2</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>8</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>8</ID>
+              <Name>gCargar</Name>
+            </NormalGUI>
+            <Controls />
           </GUIMain>
         </GUIs>
       </GUIFolder>
