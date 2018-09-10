@@ -860,7 +860,7 @@
                 <Name>BGuardarMenu</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick />
+                <OnClick>BCargarMenu_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -878,7 +878,7 @@
                 <Top>65</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
-                <Name>Button2</Name>
+                <Name>BCargarMenu</Name>
               </GUIButton>
               <GUIButton>
                 <OnClick />
@@ -1083,7 +1083,7 @@
                 <Name>BNuevaPartida</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick />
+                <OnClick>BCargarPartidaInicio_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1150,11 +1150,11 @@
                 <TextColor>0</TextColor>
                 <Font>0</Font>
                 <Text xml:space="preserve">Guarda tu Partida</Text>
-                <Height>37</Height>
-                <Locked>False</Locked>
-                <Width>283</Width>
-                <Left>21</Left>
-                <Top>22</Top>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>290</Width>
+                <Left>20</Left>
+                <Top>25</Top>
                 <ZOrder>0</ZOrder>
                 <ID>0</ID>
                 <Name>Label2</Name>
@@ -1166,9 +1166,9 @@
                 <ShowBorder>True</ShowBorder>
                 <Text />
                 <Height>30</Height>
-                <Locked>False</Locked>
+                <Locked>True</Locked>
                 <Width>290</Width>
-                <Left>21</Left>
+                <Left>20</Left>
                 <Top>65</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
@@ -1184,11 +1184,11 @@
                 <SelectedBackgroundColor>16</SelectedBackgroundColor>
                 <Font>0</Font>
                 <Translated>True</Translated>
-                <Height>333</Height>
-                <Locked>False</Locked>
-                <Width>291</Width>
-                <Left>21</Left>
-                <Top>99</Top>
+                <Height>335</Height>
+                <Locked>True</Locked>
+                <Width>290</Width>
+                <Left>20</Left>
+                <Top>100</Top>
                 <ZOrder>2</ZOrder>
                 <ID>2</ID>
                 <Name>ListaDeGuardado</Name>
@@ -1209,7 +1209,7 @@
                 <Locked>True</Locked>
                 <Width>140</Width>
                 <Left>330</Left>
-                <Top>382</Top>
+                <Top>385</Top>
                 <ZOrder>3</ZOrder>
                 <ID>3</ID>
                 <Name>BGuardar</Name>
@@ -1227,10 +1227,10 @@
                 <Image>0</Image>
                 <Text>Cancelar</Text>
                 <Height>35</Height>
-                <Locked>False</Locked>
+                <Locked>True</Locked>
                 <Width>140</Width>
-                <Left>513</Left>
-                <Top>382</Top>
+                <Left>510</Left>
+                <Top>385</Top>
                 <ZOrder>4</ZOrder>
                 <ID>4</ID>
                 <Name>BCancelarGuardado</Name>
@@ -1248,10 +1248,10 @@
                 <Image>0</Image>
                 <Text>Borrar</Text>
                 <Height>35</Height>
-                <Locked>False</Locked>
+                <Locked>True</Locked>
                 <Width>140</Width>
-                <Left>691</Left>
-                <Top>382</Top>
+                <Left>690</Left>
+                <Top>385</Top>
                 <ZOrder>5</ZOrder>
                 <ID>5</ID>
                 <Name>BBorrar</Name>
@@ -1268,11 +1268,11 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Image>0</Image>
                 <Text />
-                <Height>335</Height>
-                <Locked>False</Locked>
+                <Height>281</Height>
+                <Locked>True</Locked>
                 <Width>500</Width>
                 <Left>330</Left>
-                <Top>22</Top>
+                <Top>65</Top>
                 <ZOrder>6</ZOrder>
                 <ID>6</ID>
                 <Name>BScreenShot</Name>
@@ -1282,22 +1282,154 @@
           <GUIMain>
             <NormalGUI>
               <OnClick />
-              <Height>200</Height>
-              <Width>300</Width>
-              <Left>0</Left>
-              <Top>0</Top>
+              <Height>480</Height>
+              <Width>853</Width>
+              <Left>213</Left>
+              <Top>120</Top>
               <Clickable>True</Clickable>
               <Visibility>NormalButInitiallyOff</Visibility>
               <PopupYPos>0</PopupYPos>
-              <ZOrder>0</ZOrder>
-              <BorderColor>2</BorderColor>
+              <ZOrder>4</ZOrder>
+              <BorderColor>0</BorderColor>
               <Transparency>0</Transparency>
-              <BackgroundColor>8</BackgroundColor>
+              <BackgroundColor>50719</BackgroundColor>
               <BackgroundImage>0</BackgroundImage>
               <ID>8</ID>
               <Name>gCargar</Name>
             </NormalGUI>
-            <Controls />
+            <Controls>
+              <GUILabel>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">Carga tu partida</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>290</Width>
+                <Left>20</Left>
+                <Top>25</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Label3</Name>
+              </GUILabel>
+              <GUIListBox>
+                <OnSelectionChanged>ListaDeCargado_OnSelectionChanged</OnSelectionChanged>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <ShowBorder>True</ShowBorder>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>0</TextColor>
+                <SelectedTextColor>7</SelectedTextColor>
+                <SelectedBackgroundColor>16</SelectedBackgroundColor>
+                <Font>0</Font>
+                <Translated>True</Translated>
+                <Height>335</Height>
+                <Locked>True</Locked>
+                <Width>290</Width>
+                <Left>20</Left>
+                <Top>100</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>ListaDeCargado</Name>
+              </GUIListBox>
+              <GUIButton>
+                <OnClick>BCargar_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Cargar</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>140</Width>
+                <Left>405</Left>
+                <Top>385</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>BCargar</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BCancelarCargado_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Cancelar</Text>
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>140</Width>
+                <Left>645</Left>
+                <Top>385</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name>BCancelarCargado</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick />
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text />
+                <Height>281</Height>
+                <Locked>True</Locked>
+                <Width>500</Width>
+                <Left>330</Left>
+                <Top>65</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name>BScreenShotCargado</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>35</Height>
+              <Width>200</Width>
+              <Left>0</Left>
+              <Top>685</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>70</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>9</ID>
+              <Name>gGuardadoRapido</Name>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>2016</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">Guardado Rapido</Text>
+                <Height>30</Height>
+                <Locked>False</Locked>
+                <Width>197</Width>
+                <Left>2</Left>
+                <Top>5</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Label4</Name>
+              </GUILabel>
+            </Controls>
           </GUIMain>
         </GUIs>
       </GUIFolder>
