@@ -53,8 +53,8 @@
       <NumberDialogOptions>Normal</NumberDialogOptions>
       <DialogOptionsBackwards>False</DialogOptionsBackwards>
       <SpeechPortraitSide>BasedOnCharacterPosition</SpeechPortraitSide>
-      <TextWindowGUI>0</TextWindowGUI>
-      <AlwaysDisplayTextAsSpeech>False</AlwaysDisplayTextAsSpeech>
+      <TextWindowGUI>10</TextWindowGUI>
+      <AlwaysDisplayTextAsSpeech>True</AlwaysDisplayTextAsSpeech>
       <FontsForHiRes>False</FontsForHiRes>
       <AntiAliasFonts>False</AntiAliasFonts>
       <ThoughtGUI>0</ThoughtGUI>
@@ -1431,6 +1431,206 @@
               </GUILabel>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <TextWindowGUI>
+              <TextColor>0</TextColor>
+              <Padding>3</Padding>
+              <BackgroundColor>65535</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>10</ID>
+              <Name>gGloboDeDialogoDer</Name>
+            </TextWindowGUI>
+            <Controls>
+              <GUITextWindowEdge>
+                <Image>37</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>0</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>38</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>90</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>39</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>0</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>40</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>90</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>41</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>40</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>42</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>40</Top>
+                <ZOrder>5</ZOrder>
+                <ID>5</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>43</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>40</Left>
+                <Top>0</Top>
+                <ZOrder>6</ZOrder>
+                <ID>6</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>44</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>40</Left>
+                <Top>90</Top>
+                <ZOrder>7</ZOrder>
+                <ID>7</ID>
+                <Name />
+              </GUITextWindowEdge>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <TextWindowGUI>
+              <TextColor>0</TextColor>
+              <Padding>3</Padding>
+              <BackgroundColor>65535</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>11</ID>
+              <Name>gGloboDeDialogoIzq</Name>
+            </TextWindowGUI>
+            <Controls>
+              <GUITextWindowEdge>
+                <Image>37</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>0</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>36</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>90</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>39</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>0</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>45</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>90</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>41</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>40</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>42</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>40</Top>
+                <ZOrder>5</ZOrder>
+                <ID>5</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>43</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>40</Left>
+                <Top>0</Top>
+                <ZOrder>6</ZOrder>
+                <ID>6</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>44</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>40</Left>
+                <Top>90</Top>
+                <ZOrder>7</ZOrder>
+                <ID>7</ID>
+                <Name />
+              </GUITextWindowEdge>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1686,13 +1886,13 @@
             <ScriptName>cAle</ScriptName>
             <RealName>Alejandro</RealName>
             <NormalView>1</NormalView>
-            <SpeechView>0</SpeechView>
+            <SpeechView>10</SpeechView>
             <IdleView>0</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>4</StartingRoom>
             <StartX>500</StartX>
-            <StartY>500</StartY>
+            <StartY>400</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>18</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
@@ -1726,7 +1926,7 @@
             <ScriptName>cSantiago</ScriptName>
             <RealName xml:space="preserve">New character</RealName>
             <NormalView>2</NormalView>
-            <SpeechView>0</SpeechView>
+            <SpeechView>10</SpeechView>
             <IdleView>0</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
@@ -2621,6 +2821,21 @@
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraUpWalk6.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="46" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraDownSpk.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="47" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraDownSpk2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="197" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraDownSpk3.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Cursores">
@@ -2996,64 +3211,44 @@
                   <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00024.bmp</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="36" Width="42" Height="36" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
-                <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00036.bmp</FileName>
-                </Source>
-              </Sprite>
               <Sprite Slot="37" Width="10" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00037.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\top-left.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="38" Width="10" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00038.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\bottom-left.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="39" Width="10" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00039.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\top-right.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="40" Width="10" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00040.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\bottom-right.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="41" Width="10" Height="1" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00041.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\middle-left.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="42" Width="10" Height="1" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00042.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\middle-right.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="43" Width="1" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00043.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\top-centre.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="44" Width="1" Height="2" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="44" Width="1" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00044.bmp</FileName>
-                </Source>
-              </Sprite>
-              <Sprite Slot="45" Width="1" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
-                <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00045.bmp</FileName>
-                </Source>
-              </Sprite>
-              <Sprite Slot="46" Width="10" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
-                <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00046.bmp</FileName>
-                </Source>
-              </Sprite>
-              <Sprite Slot="47" Width="10" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
-                <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00047.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\bottom-centre.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="48" Width="380" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
@@ -3209,6 +3404,16 @@
               <Sprite Slot="183" Width="58" Height="67" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
                   <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00183.bmp</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="36" Width="10" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\bottom-right Invertido.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="45" Width="10" Height="16" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Documentos\bottom-left Invertido.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -3534,6 +3739,239 @@
                       <ViewFrame>
                         <ID>0</ID>
                         <Image>84</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>10</ID>
+                <Name>VInvisible</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>11</ID>
+                <Name>VAleSpk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>46</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>47</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>197</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>151</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>152</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>153</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>154</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>151</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>152</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>153</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>154</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>190</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>12</ID>
+                <Name>VSantiagoSpk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>164</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>165</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>166</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>158</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>159</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>160</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>161</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>162</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>163</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>83</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
