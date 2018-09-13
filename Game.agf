@@ -1985,12 +1985,6 @@ return
   Hablar("Cjau");
 STOP
 
-@4
-return
-@5
-return
-@6
-return
 ]]></Script>
             <DialogOptions>
               <DialogOption>
@@ -2008,24 +2002,6 @@ return
               <DialogOption>
                 <ID>3</ID>
                 <Text>ADIOS</Text>
-                <Show>True</Show>
-                <Say>False</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Text>Buajjajaja</Text>
-                <Show>True</Show>
-                <Say>False</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
-                <Text xml:space="preserve">Esta es una oracion muy muy larga</Text>
-                <Show>True</Show>
-                <Say>False</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>6</ID>
-                <Text xml:space="preserve">Heh he he</Text>
                 <Show>True</Show>
                 <Say>False</Say>
               </DialogOption>
@@ -2109,8 +2085,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>6</ID>
-        <HotspotX>5</HotspotX>
-        <HotspotY>7</HotspotY>
+        <HotspotX>2</HotspotX>
+        <HotspotY>2</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>78</Image>
         <View>0</View>
