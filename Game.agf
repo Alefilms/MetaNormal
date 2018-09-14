@@ -653,6 +653,10 @@
             <Number>5</Number>
             <Description IsNull="True" />
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>6</Number>
+            <Description IsNull="True" />
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -2301,6 +2305,18 @@ STOP
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <Name>FechaDere</Name>
       </MouseCursor>
+      <MouseCursor>
+        <ID>11</ID>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
+        <StandardMode>False</StandardMode>
+        <Image>202</Image>
+        <View>7</View>
+        <Animate>True</Animate>
+        <AnimateOnlyOnHotspots>True</AnimateOnlyOnHotspots>
+        <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
+        <Name>FechaIzq</Name>
+      </MouseCursor>
     </Cursors>
     <Fonts>
       <Font>
@@ -3182,6 +3198,21 @@ STOP
               <Sprite Slot="89" Width="76" Height="57" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
                   <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00089.bmp</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="200" Width="76" Height="57" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\CursorFechaIzquierda1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="201" Width="76" Height="57" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\CursorFechaIzquierda2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="202" Width="76" Height="57" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\CursorFechaIzquierda3.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -4392,6 +4423,39 @@ STOP
                   </Loop>
                 </Loops>
               </View>
+              <View>
+                <ID>7</ID>
+                <Name>VFlechaIzq</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>200</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>201</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>202</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
             </Views>
           </ViewFolder>
           <ViewFolder Name="Objetos">
@@ -4479,9 +4543,7 @@ STOP
         <Views />
       </ViewFolder>
     </Views>
-    <DeletedViews>
-      <ViewID>7</ViewID>
-    </DeletedViews>
+    <DeletedViews />
     <Scripts>
       <ScriptFolder Name="Main">
         <SubFolders />
