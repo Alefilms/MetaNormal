@@ -3708,6 +3708,26 @@ STOP
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Pensamiento3.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="211" Width="58" Height="63" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoCara1Iluminada.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="212" Width="58" Height="67" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraCara1Iluminada.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="213" Width="58" Height="67" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraCara2Iluminada.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="214" Width="58" Height="63" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoCara2Iluminada.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
         </SubFolders>
