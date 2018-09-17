@@ -13,7 +13,7 @@
       <RoomTransition>CrossFade</RoomTransition>
       <MouseWheelEnabled>True</MouseWheelEnabled>
       <UseLowResCoordinatesInScript>False</UseLowResCoordinatesInScript>
-      <TurnBeforeFacing>False</TurnBeforeFacing>
+      <TurnBeforeFacing>True</TurnBeforeFacing>
       <TurnBeforeWalking>True</TurnBeforeWalking>
       <SplitResources>0</SplitResources>
       <LetterboxMode>False</LetterboxMode>
@@ -1724,7 +1724,7 @@
             <ID>1</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>170</Image>
             <Description xml:space="preserve">New inventory item</Description>
@@ -1742,14 +1742,14 @@
             <ID>2</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
-            <CursorImage>0</CursorImage>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <CursorImage>205</CursorImage>
             <Image>72</Image>
-            <Description xml:space="preserve">New inventory item</Description>
+            <Description>Destornillador</Description>
             <Name>iDestornillador</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iDestornillador_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1760,8 +1760,8 @@
             <ID>3</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
-            <CursorImage>0</CursorImage>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <CursorImage>208</CursorImage>
             <Image>176</Image>
             <Description xml:space="preserve">New inventory item</Description>
             <Name>iControlRemoto</Name>
@@ -1778,11 +1778,29 @@
             <ID>4</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>73</Image>
             <Description xml:space="preserve">New inventory item</Description>
             <Name>iPilasGastadas</Name>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <ID>5</ID>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <CursorImage>207</CursorImage>
+            <Image>206</Image>
+            <Description xml:space="preserve">New inventory item</Description>
+            <Name>iPilasNuevas</Name>
             <Properties />
             <Interactions>
               <Event Index="0" />
@@ -2036,7 +2054,7 @@
               <Event Index="0" />
               <Event Index="1" />
               <Event Index="2">cSantiago_Talk</Event>
-              <Event Index="3" />
+              <Event Index="3">cSantiago_UseInv</Event>
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -3215,6 +3233,21 @@ STOP
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\CursorFechaIzquierda3.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="205" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Destornillador2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="207" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Pilas Nuevas Cursor.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="208" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\ControlRemoto Cursor.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Objetos">
@@ -3385,6 +3418,16 @@ STOP
                   <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00173.bmp</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="203" Width="122" Height="54" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Caja de heramientas1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="204" Width="122" Height="70" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Caja de heramientas2.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Items">
@@ -3423,6 +3466,11 @@ STOP
               <Sprite Slot="176" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
                   <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00176.bmp</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="206" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Pilas Nuevas.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -4236,7 +4284,7 @@ STOP
                     <Frames>
                       <ViewFrame>
                         <ID>0</ID>
-                        <Image>83</Image>
+                        <Image>84</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
@@ -4252,17 +4300,41 @@ STOP
                   <Loop>
                     <ID>0</ID>
                     <RunNextLoop>False</RunNextLoop>
-                    <Frames />
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
                   </Loop>
                   <Loop>
                     <ID>1</ID>
                     <RunNextLoop>False</RunNextLoop>
-                    <Frames />
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>130</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
                   </Loop>
                   <Loop>
                     <ID>2</ID>
                     <RunNextLoop>False</RunNextLoop>
-                    <Frames />
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>130</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
                   </Loop>
                   <Loop>
                     <ID>3</ID>
@@ -4529,6 +4601,32 @@ STOP
                       <ViewFrame>
                         <ID>1</ID>
                         <Image>168</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>14</ID>
+                <Name>VCajaDeHerramientas</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>203</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>204</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
