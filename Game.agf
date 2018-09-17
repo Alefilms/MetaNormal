@@ -1725,9 +1725,9 @@
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <CursorImage>0</CursorImage>
+            <CursorImage>209</CursorImage>
             <Image>170</Image>
-            <Description xml:space="preserve">New inventory item</Description>
+            <Description>Libro</Description>
             <Name>iLibro</Name>
             <Properties />
             <Interactions>
@@ -1763,7 +1763,7 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>208</CursorImage>
             <Image>176</Image>
-            <Description xml:space="preserve">New inventory item</Description>
+            <Description xml:space="preserve">Control remoto</Description>
             <Name>iControlRemoto</Name>
             <Properties />
             <Interactions>
@@ -1779,9 +1779,9 @@
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <CursorImage>0</CursorImage>
+            <CursorImage>210</CursorImage>
             <Image>73</Image>
-            <Description xml:space="preserve">New inventory item</Description>
+            <Description xml:space="preserve">Pilas Gastadas</Description>
             <Name>iPilasGastadas</Name>
             <Properties />
             <Interactions>
@@ -1799,7 +1799,7 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>207</CursorImage>
             <Image>206</Image>
-            <Description xml:space="preserve">New inventory item</Description>
+            <Description xml:space="preserve">Pilas </Description>
             <Name>iPilasNuevas</Name>
             <Properties />
             <Interactions>
@@ -2014,7 +2014,7 @@
               <Event Index="0" />
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="3">cAle_UseInv</Event>
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -2024,7 +2024,7 @@
           <Character>
             <ID>1</ID>
             <ScriptName>cSantiago</ScriptName>
-            <RealName xml:space="preserve">New character</RealName>
+            <RealName>Santiago</RealName>
             <NormalView>2</NormalView>
             <SpeechView>10</SpeechView>
             <IdleView>0</IdleView>
@@ -3246,6 +3246,16 @@ STOP
               <Sprite Slot="208" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\ControlRemoto Cursor.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="209" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Libro Cursor.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="210" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Pilas Gastadas Cursor.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
