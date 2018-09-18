@@ -635,27 +635,27 @@
         <UnloadedRooms>
           <UnloadedRoom>
             <Number>1</Number>
-            <Description IsNull="True" />
+            <Description>Room1</Description>
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>2</Number>
-            <Description IsNull="True" />
+            <Description xml:space="preserve">Sala Estudio</Description>
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>3</Number>
-            <Description IsNull="True" />
+            <Description>Intro</Description>
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>4</Number>
-            <Description IsNull="True" />
+            <Description xml:space="preserve">Menu Inicio</Description>
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>5</Number>
-            <Description IsNull="True" />
+            <Description xml:space="preserve">Fachada Estudio</Description>
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>6</Number>
-            <Description IsNull="True" />
+            <Description xml:space="preserve">Archivo Estudio</Description>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -1731,10 +1731,10 @@
             <Name>iLibro</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iLibro_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="3">iLibro_UseInv</Event>
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
@@ -1752,7 +1752,7 @@
               <Event Index="0">iDestornillador_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="3">iDestornillador_UseInv</Event>
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
@@ -1767,10 +1767,10 @@
             <Name>iControlRemoto</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iControlRemoto_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="3">iControlRemoto_UseInv</Event>
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
@@ -1785,10 +1785,10 @@
             <Name>iPilasGastadas</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iPilasGastadas_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="3">iPilasGastadas_UseInv</Event>
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
@@ -1803,10 +1803,28 @@
             <Name>iPilasNuevas</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iPilasNuevas_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="3">iPilasNuevas_UseInv</Event>
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <ID>6</ID>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <CursorImage>218</CursorImage>
+            <Image>219</Image>
+            <Description xml:space="preserve">Factura de GenericTVComp</Description>
+            <Name>iFactura</Name>
+            <Properties />
+            <Interactions>
+              <Event Index="0">iFactura_Look</Event>
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3">iFactura_UseInv</Event>
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
@@ -2633,6 +2651,16 @@ STOP
           <Type>int</Type>
           <DefaultValue>0</DefaultValue>
         </GlobalVariable>
+        <GlobalVariable>
+          <Name>ControlConPilasPuestas</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>ControlConPilasViejas</Name>
+          <Type>bool</Type>
+          <DefaultValue>True</DefaultValue>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
@@ -3258,6 +3286,11 @@ STOP
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Pilas Gastadas Cursor.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="218" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Factura Cursor.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Objetos">
@@ -3438,6 +3471,21 @@ STOP
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Caja de heramientas2.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="215" Width="41" Height="60" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Factura Objeto1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="216" Width="39" Height="37" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Factura Objeto2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="217" Width="53" Height="61" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Factura Objeto31.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Items">
@@ -3481,6 +3529,11 @@ STOP
               <Sprite Slot="206" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Pilas Nuevas.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="219" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Factura Item.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
