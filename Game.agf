@@ -697,15 +697,15 @@
                 <TextAlignment>TopRight</TextAlignment>
                 <TextColor>0</TextColor>
                 <Font>0</Font>
-                <PushedImage>75</PushedImage>
+                <PushedImage>0</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
-                <Image>74</Image>
+                <Image>224</Image>
                 <Text />
-                <Height>70</Height>
+                <Height>80</Height>
                 <Locked>True</Locked>
-                <Width>70</Width>
-                <Left>5</Left>
-                <Top>5</Top>
+                <Width>80</Width>
+                <Left>0</Left>
+                <Top>0</Top>
                 <ZOrder>0</ZOrder>
                 <ID>0</ID>
                 <Name>BAbrirInventario</Name>
@@ -718,15 +718,15 @@
                 <TextAlignment>TopMiddle</TextAlignment>
                 <TextColor>0</TextColor>
                 <Font>0</Font>
-                <PushedImage>77</PushedImage>
+                <PushedImage>0</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
-                <Image>76</Image>
+                <Image>226</Image>
                 <Text />
-                <Height>70</Height>
-                <Locked>False</Locked>
-                <Width>70</Width>
-                <Left>5</Left>
-                <Top>5</Top>
+                <Height>80</Height>
+                <Locked>True</Locked>
+                <Width>80</Width>
+                <Left>0</Left>
+                <Top>0</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
                 <Name>BCerrarInventario</Name>
@@ -1825,7 +1825,7 @@
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <CursorImage>218</CursorImage>
                 <Image>219</Image>
-                <Description xml:space="preserve">Factura de GenericTVComp</Description>
+                <Description>Factura</Description>
                 <Name>iFactura</Name>
                 <Properties />
                 <Interactions>
@@ -2044,7 +2044,7 @@
                 <Interactions>
                   <Event Index="0" />
                   <Event Index="1" />
-                  <Event Index="2" />
+                  <Event Index="2">cAle_Talk</Event>
                   <Event Index="3">cAle_UseInv</Event>
                   <Event Index="4" />
                   <Event Index="5" />
@@ -2456,7 +2456,7 @@ return
   HablarAle("Ah si me acorde");
   D2option2SeEligio = true;
   }
-option-off 3 
+
 return
 @3
   if (D2option3SeEligio == true)
@@ -2477,7 +2477,7 @@ return
   HablarSantiago("Soy muy solicitado por eso mis relaciones son cortas");
   HablarAle("Si, tan cortas que nunca llego a conocerlas");
   HablarSantiago("Tampoco vos podes hablar mucho");
-  D2option2SeEligio = true;
+  D2option3SeEligio = true;
   }
 return
 @4
@@ -2506,6 +2506,170 @@ goto-previous
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
+                    <Text xml:space="preserve">Otro tema</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+          <DialogFolder Name="DAle1">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>3</ID>
+                <Name>dAle1</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  player.FaceCharacter(cAle,eBlock);
+  HablarSantiago("Ale");
+  HablarAle("¿Si, Santi?");
+  
+return
+@1
+   if (D3option3SeEligio == true)
+  {
+ 
+  HablarSantiago("¿Se te ocurre algo mas?");
+  HablarAle("Mmm aparte de que hacer funcionar el televisor...");
+  HablarAle("No");
+  }
+  else
+  {   
+  HablarSantiago("¿Que deberiamos hacer ahora?");
+  HablarAle("Creo que tenemos que buscar una noticia en algun lado");
+  HablarAle("Probablemente en CNP esten trasmitiendo algo");
+  HablarAle("Si tan solo funcionara el televisor...");
+  D3option1SeEligio = true;
+  }
+return
+@2
+ if (D3option2SeEligio == true)
+  {
+ 
+  HablarSantiago("La historia no avanzo");
+  HablarAle("Nop");
+  }
+  else
+  {
+  HablarSantiago("¿Como va nuestra proxima noticia por el momento?");
+  HablarAle("MMmm todo comenzo con sueño muy raro");
+  HablarAle("Despues de eso, no tengo nada mas, no hemos relacionado con nada todavia");
+  D3option2SeEligio = true;
+  }
+return
+@3
+ if (D3option3SeEligio == true)
+  {
+    HablarSantiago("Sobre los simbolos...");
+    HablarAle("Decime");
+  } 
+  else
+  {
+   HablarSantiago("¿Que son esos simbolos que mencionaste?");
+   HablarAle("Soñe con cuatro simbolos");
+   HablarAle("Un extraño simbolo rojo, el numero 1912, las letras chass y el escudo de Boca");
+   HablarAle("¿De cual queres que te hable?"); 
+   D3option3SeEligio = true;
+  }
+goto-dialog 4
+
+@4
+  HablarSantiago("En fin");
+stop
+
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">¿Alguna idea?</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Estado de historia</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text>Simbolos</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Text>Nada</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>4</ID>
+                <Name>dSimbolos</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  HablarSantiago("Del extraño simbolo rojo");
+  HablarAle("Bueno, no se bien que es pero parece ser algo no muy bueno");
+  HablarAle("Ah decir verdad tendria que ver si lo he visto en algun otro lado");
+  
+return
+@2
+  HablarSantiago("De 1912");
+  HablarAle("La verdad es que no se");
+  HablarAle("Puede significar cualquier cosa, un año,una pagina en un libro");
+return
+@3
+  HablarSantiago("De chass");
+  HablarAle("Chass, chass, ¿donde escuche eso?");
+  HablarSantiago("¿Sera Parque Chass?");
+  HablarAle("Si, puede ser");
+return
+@4
+  HablarSantiago("De Boca");
+  HablarAle("La verdad es que no se mucho se futbol");
+  HablarAle("Pero estoy casi seguro que era el escudo de Boca Senior");
+  HablarSantiago("¿Es una premonicion?");
+  HablarAle("No lo se");
+  
+return
+@5
+goto-previous
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">Extraño simbolo rojo</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text>1912</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text>Chass</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Text>Boca</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>5</ID>
                     <Text xml:space="preserve">Otro tema</Text>
                     <Show>True</Show>
                     <Say>False</Say>
@@ -2671,7 +2835,7 @@ goto-previous
         <Name xml:space="preserve">Font 0</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
+        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
@@ -2681,7 +2845,7 @@ goto-previous
         <Name xml:space="preserve">Font 1</Name>
         <OutlineFont>2</OutlineFont>
         <OutlineStyle>UseOutlineFont</OutlineStyle>
-        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
+        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
@@ -2691,7 +2855,7 @@ goto-previous
         <Name xml:space="preserve">Font 2</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
+        <SourceFilename xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\ComickBook_Simple.ttf</SourceFilename>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
@@ -3005,6 +3169,21 @@ goto-previous
           <Name>D0ContadorDeChistes</Name>
           <Type>int</Type>
           <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>D3option1SeEligio</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>D3option2SeEligio</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>D3option3SeEligio</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -4144,6 +4323,26 @@ goto-previous
               <Sprite Slot="223" Width="80" Height="80" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Inventario Santiago.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="224" Width="80" Height="80" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Abrir Inventario Karadura.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="225" Width="80" Height="80" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Abrir Inventario Santiago.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="226" Width="80" Height="80" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Cerrar Inventario Karadura.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="227" Width="80" Height="80" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Cerrar Inventario Santiago.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
