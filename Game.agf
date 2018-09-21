@@ -684,7 +684,7 @@
               <BorderColor>0</BorderColor>
               <Transparency>20</Transparency>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>222</BackgroundImage>
+              <BackgroundImage>0</BackgroundImage>
               <ID>0</ID>
               <Name>gBotonesInventario</Name>
             </NormalGUI>
@@ -1719,6 +1719,68 @@
               </GUILabel>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>420</Height>
+              <Width>853</Width>
+              <Left>213</Left>
+              <Top>135</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>1</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>228</BackgroundImage>
+              <ID>13</ID>
+              <Name>gLibreta</Name>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick>gSalirDeLibreta_OnClick</OnClick>
+              <Height>720</Height>
+              <Width>1280</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>14</ID>
+              <Name>gSalirDeLibreta</Name>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <OnClick />
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>231</Image>
+                <Text xml:space="preserve">New Button</Text>
+                <Height>32</Height>
+                <Locked>False</Locked>
+                <Width>80</Width>
+                <Left>573</Left>
+                <Top>555</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Button2</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1833,6 +1895,47 @@
                   <Event Index="1" />
                   <Event Index="2" />
                   <Event Index="3">iFactura_UseInv</Event>
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <ID>8</ID>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <CursorImage>234</CursorImage>
+                <Image>233</Image>
+                <Description xml:space="preserve">New inventory item</Description>
+                <Name>iCamara</Name>
+                <Properties />
+                <Interactions>
+                  <Event Index="0">iCamara_Look</Event>
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3">iCamara_UseInv</Event>
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
+          <InventoryItemFolder Name="Propios">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <ID>7</ID>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <CursorImage>230</CursorImage>
+                <Image>229</Image>
+                <Description>Libreta</Description>
+                <Name>iLibreta</Name>
+                <Properties />
+                <Interactions>
+                  <Event Index="0">iLibreta_Look</Event>
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3">iLibreta_UseInv</Event>
                   <Event Index="4" />
                 </Interactions>
               </InventoryItem>
@@ -3619,6 +3722,36 @@ goto-previous
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraDownSpk3.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="235" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraLibreta1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="236" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraLibreta2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="237" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraLibreta3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="238" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraLibreta4.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="239" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraLibreta5.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="240" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraLibreta6.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Cursores">
@@ -3813,6 +3946,16 @@ goto-previous
               <Sprite Slot="218" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Factura Cursor.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="230" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Libreta Cursor.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="234" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Camara Cursor.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -4010,6 +4153,11 @@ goto-previous
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Factura Objeto31.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="232" Width="58" Height="55" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Camara Objeto.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Items">
@@ -4058,6 +4206,16 @@ goto-previous
               <Sprite Slot="219" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Factura Item.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="229" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Libreta Item.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="233" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Camara Item.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -4343,6 +4501,16 @@ goto-previous
               <Sprite Slot="227" Width="80" Height="80" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Cerrar Inventario Santiago.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="228" Width="853" Height="480" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Libreta1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="231" Width="80" Height="32" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tirita.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -4990,6 +5158,109 @@ goto-previous
                       <ViewFrame>
                         <ID>0</ID>
                         <Image>131</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>15</ID>
+                <Name>VAleLibreta</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>235</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>236</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>237</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>239</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>240</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>239</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>239</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>7</ID>
+                        <Image>240</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>8</ID>
+                        <Image>239</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>9</ID>
+                        <Image>240</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>10</ID>
+                        <Image>237</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>11</ID>
+                        <Image>236</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>12</ID>
+                        <Image>235</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
