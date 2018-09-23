@@ -1781,6 +1781,293 @@
               </GUIButton>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>400</Height>
+              <Width>175</Width>
+              <Left>553</Left>
+              <Top>160</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>246</BackgroundImage>
+              <ID>15</ID>
+              <Name>gCelular</Name>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text>numero?</Text>
+                <Height>58</Height>
+                <Locked>False</Locked>
+                <Width>121</Width>
+                <Left>24</Left>
+                <Top>99</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>LPantallaCelu</Name>
+              </GUILabel>
+              <GUIButton>
+                <OnClick>BNumero1_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>247</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>248</Image>
+                <Text />
+                <Height>42</Height>
+                <Locked>True</Locked>
+                <Width>45</Width>
+                <Left>6</Left>
+                <Top>240</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>BNumero1</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero2_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>249</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>250</Image>
+                <Text />
+                <Height>41</Height>
+                <Locked>True</Locked>
+                <Width>72</Width>
+                <Left>47</Left>
+                <Top>242</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>BNumero2</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero3_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>252</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>251</Image>
+                <Text />
+                <Height>42</Height>
+                <Locked>True</Locked>
+                <Width>46</Width>
+                <Left>119</Left>
+                <Top>242</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name>BNumero3</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero4_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>254</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>253</Image>
+                <Text />
+                <Height>50</Height>
+                <Locked>True</Locked>
+                <Width>42</Width>
+                <Left>4</Left>
+                <Top>271</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name>BNumero4</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero5_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>255</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>256</Image>
+                <Text />
+                <Height>39</Height>
+                <Locked>True</Locked>
+                <Width>72</Width>
+                <Left>47</Left>
+                <Top>283</Top>
+                <ZOrder>5</ZOrder>
+                <ID>5</ID>
+                <Name>BNumero5</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero6_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>257</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>258</Image>
+                <Text />
+                <Height>47</Height>
+                <Locked>True</Locked>
+                <Width>48</Width>
+                <Left>117</Left>
+                <Top>275</Top>
+                <ZOrder>6</ZOrder>
+                <ID>6</ID>
+                <Name>BNumero6</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero7_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>259</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>260</Image>
+                <Text />
+                <Height>48</Height>
+                <Locked>True</Locked>
+                <Width>40</Width>
+                <Left>5</Left>
+                <Top>311</Top>
+                <ZOrder>7</ZOrder>
+                <ID>7</ID>
+                <Name>BNumero7</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero8_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>262</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>261</Image>
+                <Text />
+                <Height>36</Height>
+                <Locked>True</Locked>
+                <Width>71</Width>
+                <Left>45</Left>
+                <Top>323</Top>
+                <ZOrder>8</ZOrder>
+                <ID>8</ID>
+                <Name>BNumero8</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero9_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>263</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>264</Image>
+                <Text />
+                <Height>46</Height>
+                <Locked>True</Locked>
+                <Width>49</Width>
+                <Left>116</Left>
+                <Top>311</Top>
+                <ZOrder>9</ZOrder>
+                <ID>9</ID>
+                <Name>BNumero9</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BAsterisco_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>265</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>266</Image>
+                <Text />
+                <Height>41</Height>
+                <Locked>True</Locked>
+                <Width>40</Width>
+                <Left>5</Left>
+                <Top>346</Top>
+                <ZOrder>10</ZOrder>
+                <ID>10</ID>
+                <Name>BAsterisco</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNumero0_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>268</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>267</Image>
+                <Text />
+                <Height>33</Height>
+                <Locked>True</Locked>
+                <Width>70</Width>
+                <Left>45</Left>
+                <Top>357</Top>
+                <ZOrder>11</ZOrder>
+                <ID>11</ID>
+                <Name>BNumero0</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BHashtag_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>269</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>270</Image>
+                <Text />
+                <Height>44</Height>
+                <Locked>True</Locked>
+                <Width>50</Width>
+                <Left>113</Left>
+                <Top>346</Top>
+                <ZOrder>12</ZOrder>
+                <ID>12</ID>
+                <Name>BHashtag</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1916,6 +2203,24 @@
                   <Event Index="4" />
                 </Interactions>
               </InventoryItem>
+              <InventoryItem>
+                <ID>9</ID>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <CursorImage>242</CursorImage>
+                <Image>243</Image>
+                <Description>Cartucho</Description>
+                <Name>iCartucho</Name>
+                <Properties />
+                <Interactions>
+                  <Event Index="0">iCartucho_Look</Event>
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3">iCartucho_UseInv</Event>
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
             </InventoryItems>
           </InventoryItemFolder>
           <InventoryItemFolder Name="Propios">
@@ -1936,6 +2241,24 @@
                   <Event Index="1" />
                   <Event Index="2" />
                   <Event Index="3">iLibreta_UseInv</Event>
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <ID>10</ID>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <CursorImage>244</CursorImage>
+                <Image>245</Image>
+                <Description xml:space="preserve">Mokia 1100</Description>
+                <Name>iCelular</Name>
+                <Properties />
+                <Interactions>
+                  <Event Index="0">iCelular_Look</Event>
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
                   <Event Index="4" />
                 </Interactions>
               </InventoryItem>
@@ -3288,6 +3611,11 @@ goto-previous
           <Type>bool</Type>
           <DefaultValue>false</DefaultValue>
         </GlobalVariable>
+        <GlobalVariable>
+          <Name>CamaraConCartucho</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
@@ -3958,6 +4286,16 @@ goto-previous
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Camara Cursor.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="242" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Cartucho Cursor.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="244" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Celular Cursor.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Objetos">
@@ -4158,6 +4496,11 @@ goto-previous
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Camara Objeto.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="241" Width="30" Height="33" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Cartucho Objeto.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Items">
@@ -4216,6 +4559,16 @@ goto-previous
               <Sprite Slot="233" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Camara Item.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="243" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Cartucho Item.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="245" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Celular Item.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -4511,6 +4864,131 @@ goto-previous
               <Sprite Slot="231" Width="80" Height="32" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tirita.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="246" Width="175" Height="400" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Celular GUI.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="247" Width="45" Height="42" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 1 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="248" Width="45" Height="42" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="249" Width="72" Height="41" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 2 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="250" Width="72" Height="41" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="251" Width="46" Height="42" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="252" Width="46" Height="42" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 3 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="253" Width="42" Height="50" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 4.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="254" Width="42" Height="50" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 4 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="255" Width="72" Height="39" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 5 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="256" Width="72" Height="39" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 5.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="257" Width="48" Height="47" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 6 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="258" Width="48" Height="47" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 6.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="259" Width="40" Height="48" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 7 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="260" Width="40" Height="48" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 7.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="261" Width="71" Height="36" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 8.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="262" Width="71" Height="36" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 8 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="263" Width="49" Height="46" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 9 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="264" Width="49" Height="46" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 9.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="265" Width="40" Height="41" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Asterisco Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="266" Width="40" Height="41" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Asterisco.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="267" Width="70" Height="33" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 0.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="268" Width="70" Height="33" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton 0 Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="269" Width="50" Height="44" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Hashtag Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="270" Width="50" Height="44" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Hashtag.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
