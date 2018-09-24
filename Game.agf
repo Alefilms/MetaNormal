@@ -1791,7 +1791,7 @@
               <Clickable>True</Clickable>
               <Visibility>NormalButInitiallyOff</Visibility>
               <PopupYPos>0</PopupYPos>
-              <ZOrder>0</ZOrder>
+              <ZOrder>2</ZOrder>
               <BorderColor>0</BorderColor>
               <Transparency>0</Transparency>
               <BackgroundColor>0</BackgroundColor>
@@ -2066,6 +2066,210 @@
                 <ID>12</ID>
                 <Name>BHashtag</Name>
               </GUIButton>
+              <GUIButton>
+                <OnClick>BCancelar_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>271</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>272</Image>
+                <Text />
+                <Height>68</Height>
+                <Locked>True</Locked>
+                <Width>49</Width>
+                <Left>114</Left>
+                <Top>171</Top>
+                <ZOrder>13</ZOrder>
+                <ID>13</ID>
+                <Name>BCancelar</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BNada_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>274</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>273</Image>
+                <Text />
+                <Height>65</Height>
+                <Locked>True</Locked>
+                <Width>63</Width>
+                <Left>55</Left>
+                <Top>173</Top>
+                <ZOrder>14</ZOrder>
+                <ID>14</ID>
+                <Name>BNada</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BLinterna_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>276</Image>
+                <Text />
+                <Height>34</Height>
+                <Locked>True</Locked>
+                <Width>51</Width>
+                <Left>8</Left>
+                <Top>206</Top>
+                <ZOrder>15</ZOrder>
+                <ID>15</ID>
+                <Name>BLinterna</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>BLlamar_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>277</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>278</Image>
+                <Text />
+                <Height>35</Height>
+                <Locked>True</Locked>
+                <Width>50</Width>
+                <Left>9</Left>
+                <Top>170</Top>
+                <ZOrder>16</ZOrder>
+                <ID>16</ID>
+                <Name>BLlamar</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick>gSalirDelCelular_OnClick</OnClick>
+              <Height>720</Height>
+              <Width>1280</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>16</ID>
+              <Name>gSalirDelCelular</Name>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
+          <GUIMain>
+            <TextWindowGUI>
+              <TextColor>0</TextColor>
+              <Padding>5</Padding>
+              <BackgroundColor>65528</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>17</ID>
+              <Name>gDialogExt</Name>
+            </TextWindowGUI>
+            <Controls>
+              <GUITextWindowEdge>
+                <Image>299</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>0</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>293</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>90</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>300</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>0</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>294</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>90</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>296</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>0</Left>
+                <Top>40</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>297</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>90</Left>
+                <Top>40</Top>
+                <ZOrder>5</ZOrder>
+                <ID>5</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>298</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>40</Left>
+                <Top>0</Top>
+                <ZOrder>6</ZOrder>
+                <ID>6</ID>
+                <Name />
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>295</Image>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>10</Width>
+                <Left>40</Left>
+                <Top>90</Top>
+                <ZOrder>7</ZOrder>
+                <ID>7</ID>
+                <Name />
+              </GUITextWindowEdge>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -2572,7 +2776,7 @@
                 <ScriptName>cCosa</ScriptName>
                 <RealName xml:space="preserve">New character</RealName>
                 <NormalView>10</NormalView>
-                <SpeechView>0</SpeechView>
+                <SpeechView>10</SpeechView>
                 <IdleView>0</IdleView>
                 <ThinkingView>0</ThinkingView>
                 <BlinkingView>0</BlinkingView>
@@ -3616,6 +3820,11 @@ goto-previous
           <Type>bool</Type>
           <DefaultValue>false</DefaultValue>
         </GlobalVariable>
+        <GlobalVariable>
+          <Name>CharlandoPorCelu</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
@@ -4078,6 +4287,36 @@ goto-previous
               <Sprite Slot="240" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraLibreta6.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="279" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightCelularSpk.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="280" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightCelularSpk1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="281" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightCelularSpk2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="282" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightCelular.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="283" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightCelular1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="284" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightCelular2.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -4868,7 +5107,7 @@ goto-previous
               </Sprite>
               <Sprite Slot="246" Width="175" Height="400" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Celular GUI.png</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Celular GUI 2.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="247" Width="45" Height="42" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
@@ -4989,6 +5228,126 @@ goto-previous
               <Sprite Slot="270" Width="50" Height="44" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Hashtag.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="271" Width="49" Height="68" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Cancelar Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="272" Width="49" Height="68" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Cancelar.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="273" Width="63" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Nada.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="274" Width="63" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Nada Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="275" Width="51" Height="34" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Linterna Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="276" Width="51" Height="34" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Linterna.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="277" Width="50" Height="35" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Llamar Push.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="278" Width="50" Height="35" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Boton Llamar.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="285" Width="7" Height="6" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExBotLeft.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="286" Width="7" Height="6" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExBotRight.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="287" Width="8" Height="4" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtBot.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="288" Width="4" Height="8" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtLeft.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="289" Width="4" Height="8" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtRight.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="290" Width="8" Height="4" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtTop.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="291" Width="7" Height="6" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtTopLeft.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="292" Width="7" Height="6" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtTopRight.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="293" Width="7" Height="6" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExBotLeft.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="294" Width="7" Height="6" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExBotRight.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="295" Width="8" Height="4" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtBot.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="296" Width="4" Height="8" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtLeft.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="297" Width="4" Height="8" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtRight.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="298" Width="8" Height="4" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtTop.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="299" Width="7" Height="6" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtTopLeft.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="300" Width="7" Height="6" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\DialogExtTopRight.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -5740,6 +6099,148 @@ goto-previous
                         <ID>12</ID>
                         <Image>235</Image>
                         <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>16</ID>
+                <Name>VSantiagoCelularSpk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>279</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>280</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>281</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>280</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>279</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>280</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>281</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>280</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>279</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>284</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>283</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>282</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>279</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>284</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>283</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>282</Image>
+                        <Flipped>True</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
                       </ViewFrame>
