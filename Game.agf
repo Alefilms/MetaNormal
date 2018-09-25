@@ -3308,6 +3308,204 @@ goto-previous
               </Dialog>
             </Dialogs>
           </DialogFolder>
+          <DialogFolder Name="DCelular">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>5</ID>
+                <Name>dFactura</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+   if ( gCelular.Visible == false)
+   {
+     HablarCosa("Gracias por comunicarte con GenericTVComp");
+     HablarCosa("Para adquirir el pack premiun de futbol marque 1");
+     HablarCosa("Para solicitar el informe de su factura marque 2");
+     HablarCosa("Para informar el pago de una factura vencida marque 3");
+     HablarCosa("Para dar de baja marque 4");   
+     gCelular.Visible = true;
+     gSalirDelCelular.Visible = true;
+     LPantallaCelu.Text = "1? o 2? o 3? o 4?";
+   }
+   else 
+   {
+     if (LPantallaCelu.Text == "1")
+       {
+         gCelular.Visible = false;
+         gSalirDelCelular.Visible = false;
+         HablarCosa("Lo lamentamos pero usted no es un cliente de confianza para adquirir el pack premiun");
+         HablarCosa("Que tenga un buen dia");
+         Hablar("¡Pero que indignante es este sistema!");
+         if (player.Loop == 1)       // Si mira a la izquierda
+          {
+            player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animacion para guardar el celular izq
+          }
+          else
+          {
+            player.Animate(2, 5, eOnce, eBlock, eForwards); // Animacion para guardar el celular dere
+          }
+          player.UnlockView();
+         LPantallaCelu.Text = "numero?";
+         CharlandoPorCelu = false;
+          }
+      if (LPantallaCelu.Text == "2")
+        {
+           if (SeAvisoElPagoFactura == true)
+           {
+             gCelular.Visible = false;
+             gSalirDelCelular.Visible = false;
+             HablarCosa("Su factura se encuentra al dia");
+             HablarCosa("Que tenga un buen dia");
+                   if (player.Loop == 1)       // Si mira a la izquierda
+                {
+                  player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animacion para guardar el celular izq
+                }
+                else
+                {
+                  player.Animate(2, 5, eOnce, eBlock, eForwards); // Animacion para guardar el celular dere
+                }
+              player.UnlockView();
+              LPantallaCelu.Text = "numero?";
+              CharlandoPorCelu = false;
+           }
+           else
+              {
+              gCelular.Visible = false;
+              HablarCosa("Su factura de television asociada a este movil se encuentra vencida");
+              HablarCosa("Si ya abonaste, informa el pago marcando 4");
+              LPantallaCelu.Text = "1? o 2? o 3? o 4?";
+              gCelular.Visible = true;
+              gSalirDelCelular.Visible = true;
+               }
+        }
+       if (LPantallaCelu.Text == "3")
+        {
+          gCelular.Visible = false;
+          HablarCosa("Usted va informar el pago de una factura vencida");
+          HablarCosa("Si es correcto marque 1, de lo contrario marque 2");
+          gCelular.Visible = true;  
+          gSalirDelCelular.Visible = true;
+        }
+       if (LPantallaCelu.Text == "31")
+        {
+           if (SeAvisoElPagoFactura == true)
+           {
+             HablarCosa("Usted no registra factura vencida alguna");
+             HablarCosa("Gracias por comunicarte");
+            HablarCosa("Que tenga un buen dia");
+           }
+           else
+           {
+            gCelular.Visible = false;
+            gSalirDelCelular.Visible = false;
+            HablarCosa("Acabamos de recibir el informe de pago");
+            HablarCosa("Su linea de television sera restaurada entre 1 segundo o 3 semanas");
+            HablarCosa("Gracias por comunicarte");
+            HablarCosa("Que tenga un buen dia");
+            SeAvisoElPagoFactura = true;
+           }
+          if (player.Loop == 1)       // Si mira a la izquierda
+          {
+            player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animacion para guardar el celular izq
+          }
+          else
+          {
+            player.Animate(2, 5, eOnce, eBlock, eForwards); // Animacion para guardar el celular dere
+          }
+          player.UnlockView();
+         LPantallaCelu.Text = "numero?";
+         CharlandoPorCelu = false;
+        }
+        if (LPantallaCelu.Text == "32")
+        {
+          gCelular.Visible = false;
+          HablarCosa("Para adquirir el pack premiun de futbol marque 1");
+           HablarCosa("Para solicitar el informe de su factura marque 2");
+           HablarCosa("Para informar el pago de una factura vencida marque 3");
+           HablarCosa("Para dar de baja marque 4");  
+            LPantallaCelu.Text = "1? o 2? o 3? o 4?";
+            gCelular.Visible = true;
+            gSalirDelCelular.Visible = true;
+        }
+   
+       if (LPantallaCelu.Text == "4")
+       {
+         if (SeDioDeBaja == true)
+         {
+           gCelular.Visible = false;
+           HablarCosa("Su proximo reintento para darse de baja estara disponible en 2 meses"); 
+          HablarCosa("Para adquirir el pack premiun de futbol marque 1");
+           HablarCosa("Para solicitar el informe de su factura marque 2");
+           HablarCosa("Para informar el pago de una factura vencida marque 3");
+           HablarCosa("Para dar de baja marque 4");  
+            LPantallaCelu.Text = "1? o 2? o 3? o 4?";
+            gCelular.Visible = true;
+            gSalirDelCelular.Visible = true;
+           }
+         else
+         {
+          gCelular.Visible = false;
+         HablarCosa("Si usted quiere dar de baja el servicio marque 1, de lo contrario marque 2");
+         gCelular.Visible = true;
+         gSalirDelCelular.Visible = true;
+         }
+       }
+        if (LPantallaCelu.Text == "41")
+       {
+          gCelular.Visible = false;
+         HablarCosa("Si usted REALMENTE quiere dar de baja el servicio marque 1, de lo contrario marque 2");
+         gCelular.Visible = true;
+         gSalirDelCelular.Visible = true;
+       } 
+         if (LPantallaCelu.Text == "411")
+       {
+          gCelular.Visible = false;
+         HablarCosa("Si usted NO quiere dar de baja el servicio marque 2, de lo contrario marque 1");
+         gCelular.Visible = true;
+         gSalirDelCelular.Visible = true;
+       } 
+      if (LPantallaCelu.Text == "4111")
+       {
+          gCelular.Visible = false;
+         HablarCosa("Para comprobar que usted no es un robot, si quiere dar de baja marque...");
+         HablarCosa("La raiz cuadrada de 100, menos 3 al cuadrado");
+         HablarCosa("De lo contrario apriete cualquier tecla menos el 1");
+         gCelular.Visible = true;
+         gSalirDelCelular.Visible = true;
+       }
+        if (LPantallaCelu.Text == "41111")
+       {
+          gCelular.Visible = false;
+          gSalirDelCelular.Visible = false;
+         HablarCosa("Hemos dado de BAJA a su servicio anterior...");
+         HablarCosa("Pero al ser nuestro cliente numero 100000, lo hemos bonificado con un nuevo servicio");
+         HablarCosa("Todas sus facturas vencidas fueron descartadas, ahora cuenta con 2 meses gratis bonificados");
+         HablarCosa("Gracias por elegirnos");
+         HablarCosa("Que tenga un buen dia");
+        SeDioDeBaja = true;
+          SeAvisoElPagoFactura = true;
+        
+          if (player.Loop == 1)       // Si mira a la izquierda
+          {
+            player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animacion para guardar el celular izq
+          }
+          else
+          {
+            player.Animate(2, 5, eOnce, eBlock, eForwards); // Animacion para guardar el celular dere
+          }
+          player.UnlockView();
+         LPantallaCelu.Text = "numero?";
+         CharlandoPorCelu = false;
+         Hablar("Eso se llama ganarle al sistema");
+       } 
+   }
+stop
+]]></Script>
+                <DialogOptions />
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
         </SubFolders>
         <Dialogs />
       </DialogFolder>
@@ -3822,6 +4020,16 @@ goto-previous
         </GlobalVariable>
         <GlobalVariable>
           <Name>CharlandoPorCelu</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>SeAvisoElPagoFactura</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>SeDioDeBaja</Name>
           <Type>bool</Type>
           <DefaultValue>false</DefaultValue>
         </GlobalVariable>
