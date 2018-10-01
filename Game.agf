@@ -651,6 +651,10 @@
                 <Number>5</Number>
                 <Description xml:space="preserve">Fachada Estudio</Description>
               </UnloadedRoom>
+              <UnloadedRoom>
+                <Number>7</Number>
+                <Description xml:space="preserve">Escena Tv</Description>
+              </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
         </SubFolders>
@@ -2396,7 +2400,7 @@
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <CursorImage>234</CursorImage>
                 <Image>233</Image>
-                <Description xml:space="preserve">New inventory item</Description>
+                <Description>Camara</Description>
                 <Name>iCamara</Name>
                 <Properties />
                 <Interactions>
@@ -2691,9 +2695,9 @@
                 <IdleView>0</IdleView>
                 <ThinkingView>0</ThinkingView>
                 <BlinkingView>0</BlinkingView>
-                <StartingRoom>-1</StartingRoom>
-                <StartX>160</StartX>
-                <StartY>120</StartY>
+                <StartingRoom>2</StartingRoom>
+                <StartX>862</StartX>
+                <StartY>606</StartY>
                 <UniformMovementSpeed>True</UniformMovementSpeed>
                 <MovementSpeed>19</MovementSpeed>
                 <MovementSpeedX>0</MovementSpeedX>
@@ -2811,6 +2815,46 @@
                   <Event Index="7" />
                 </Interactions>
               </Character>
+              <Character>
+                <ID>4</ID>
+                <ScriptName>cTV</ScriptName>
+                <RealName />
+                <NormalView>10</NormalView>
+                <SpeechView>0</SpeechView>
+                <IdleView>0</IdleView>
+                <ThinkingView>0</ThinkingView>
+                <BlinkingView>0</BlinkingView>
+                <StartingRoom>2</StartingRoom>
+                <StartX>1275</StartX>
+                <StartY>180</StartY>
+                <UniformMovementSpeed>True</UniformMovementSpeed>
+                <MovementSpeed>3</MovementSpeed>
+                <MovementSpeedX>0</MovementSpeedX>
+                <MovementSpeedY>0</MovementSpeedY>
+                <AnimationDelay>4</AnimationDelay>
+                <SpeechAnimationDelay>5</SpeechAnimationDelay>
+                <SpeechColor>11</SpeechColor>
+                <Solid>True</Solid>
+                <Clickable>True</Clickable>
+                <UseRoomAreaScaling>True</UseRoomAreaScaling>
+                <UseRoomAreaLighting>True</UseRoomAreaLighting>
+                <TurnBeforeWalking>True</TurnBeforeWalking>
+                <DiagonalLoops>True</DiagonalLoops>
+                <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+                <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+                <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                  <Event Index="5" />
+                  <Event Index="6" />
+                  <Event Index="7" />
+                </Interactions>
+              </Character>
             </Characters>
           </CharacterFolder>
         </SubFolders>
@@ -2831,13 +2875,36 @@
                 <Script><![CDATA[// Dialog script file
   
 @S  // Dialog startup entry point
+ if (SantiagoDesmotivado == true)
+ {
+   player.Walk(1129, 561,eBlock,eWalkableAreas);
+   player.FaceCharacter(cSantiago,eBlock);
+  HablarAle("Che Santi");
+  HablarSantiago("¿Qué pasa ahora Ale?");
+  if (D1PrimeraVez == true)
+    {
+      HablarAle("Ey,¿estas deprimido o algo?");
+      HablarSantiago("Tan solo desmotivado");
+      HablarSantiago("Si tan solo tuviera mi cámara...");
+      HablarSantiago("En fin, ¿Qué me decias?");
+      D1PrimeraVez = false;
+     }
+  }
+   else
+   {
   player.FaceCharacter(cSantiago,eBlock);
   HablarAle("Che Santi");
   cSantiago.FaceCharacter(player,eBlock);
   HablarSantiago("Decime");
+   }
 return
 @1
-   
+   if (SantiagoDesmotivado == true)
+   {
+   HablarAle("Queria hacerte una consulta sobre lo que deberiamos hacer...");
+   HablarSantiago("No me siento con ganas de hablar de trabajo ahora mismo");
+   return RUN_DIALOG_RETURN;
+     }
 goto-dialog 1  
   
 @2
@@ -3373,7 +3440,7 @@ goto-previous
               {
               gCelular.Visible = false;
               HablarCosa("Su factura de television asociada a este movil se encuentra vencida");
-              HablarCosa("Si ya abonaste, informa el pago marcando 4");
+              HablarCosa("Si ya abonaste, informa el pago marcando 3");
               LPantallaCelu.Text = "1? o 2? o 3? o 4?";
               gCelular.Visible = true;
               gSalirDelCelular.Visible = true;
@@ -3961,7 +4028,7 @@ stop
         <GlobalVariable>
           <Name>ControlConPilasViejas</Name>
           <Type>bool</Type>
-          <DefaultValue>True</DefaultValue>
+          <DefaultValue>true</DefaultValue>
         </GlobalVariable>
         <GlobalVariable>
           <Name>D1option1SeEligio</Name>
@@ -4033,6 +4100,26 @@ stop
           <Type>bool</Type>
           <DefaultValue>false</DefaultValue>
         </GlobalVariable>
+        <GlobalVariable>
+          <Name>Canales</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>SantiagoDesmotivado</Name>
+          <Type>bool</Type>
+          <DefaultValue>true</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>D1PrimeraVez</Name>
+          <Type>bool</Type>
+          <DefaultValue>true</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>SantiagoEnEscritorio</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
@@ -4082,9 +4169,9 @@ stop
                 </Source>
               </Sprite>
               <Sprite Slot="0" Width="1" Height="1" ColorDepth="8" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="79" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="79" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00079.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Santiago.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="80" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
@@ -4102,9 +4189,9 @@ stop
                   <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00083.bmp</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="84" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="84" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00084.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoUp.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="91" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
@@ -4247,29 +4334,29 @@ stop
                   <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00118.bmp</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="119" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="119" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00119.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoWalkDown1.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="120" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="120" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00120.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoWalkDown2.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="121" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="121" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00121.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoWalkDown3.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="122" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="122" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00122.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoWalkDown4.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="123" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="123" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00123.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoWalkDown5.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="129" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
@@ -4372,19 +4459,19 @@ stop
                   <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00163.bmp</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="164" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="164" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00164.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoSpk.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="165" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="165" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00165.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoSpk2.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="166" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+              <Sprite Slot="166" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
-                  <FileName>C:\Users\Alejandro\Downloads\AGSTool 6\Metanormal Corrupto\MetaNormal\acsprset\spr00166.bmp</FileName>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoSpk3.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="184" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
@@ -4525,6 +4612,136 @@ stop
               <Sprite Slot="284" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightCelular2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="308" Width="112" Height="167" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraSentado.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="309" Width="93" Height="167" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoSentado.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="310" Width="93" Height="195" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoSentado1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="311" Width="112" Height="213" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraSentado1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="312" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoEscritorio1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="313" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoEscritorioSpk1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="314" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoEscritorioSpk2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="315" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoEscritorioSpk3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="316" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoLeftWalk1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="317" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoLeftWalk2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="318" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoLeftWalk3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="319" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoLeftWalk4.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="320" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoLeftWalk5.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="321" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoLeftWalk6.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="322" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightWalk1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="323" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightWalk2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="324" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightWalk3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="325" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightWalk4.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="326" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightWalk5.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="327" Width="110" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoRightWalk6.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="328" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoUpWalk1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="329" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoUpWalk2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="330" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoUpWalk3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="331" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoUpWalk4.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="332" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoUpWalk5.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="333" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\SantiagoUpWalk6.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -4946,6 +5163,41 @@ stop
               <Sprite Slot="241" Width="30" Height="33" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Cartucho Objeto.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="301" Width="204" Height="92" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Ruido Tv 1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="302" Width="204" Height="92" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Ruido Tv 2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="303" Width="204" Height="92" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Ruido Tv 3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="304" Width="204" Height="92" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Canal RFF.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="305" Width="203" Height="86" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Canal PAD.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="306" Width="199" Height="83" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Canal CNP1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="307" Width="199" Height="83" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Canal CNP2.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -5806,41 +6058,34 @@ stop
                       </ViewFrame>
                       <ViewFrame>
                         <ID>1</ID>
-                        <Image>118</Image>
-                        <Flipped>False</Flipped>
-                        <Delay>0</Delay>
-                        <Sound>0</Sound>
-                      </ViewFrame>
-                      <ViewFrame>
-                        <ID>2</ID>
                         <Image>119</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
                       </ViewFrame>
                       <ViewFrame>
-                        <ID>3</ID>
+                        <ID>2</ID>
                         <Image>120</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
                       </ViewFrame>
                       <ViewFrame>
-                        <ID>4</ID>
+                        <ID>3</ID>
                         <Image>121</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
                       </ViewFrame>
                       <ViewFrame>
-                        <ID>5</ID>
+                        <ID>4</ID>
                         <Image>122</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
                       </ViewFrame>
                       <ViewFrame>
-                        <ID>6</ID>
+                        <ID>5</ID>
                         <Image>123</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
@@ -5859,6 +6104,48 @@ stop
                         <Delay>0</Delay>
                         <Sound>0</Sound>
                       </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>316</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>317</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>318</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>319</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>320</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>321</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
                     </Frames>
                   </Loop>
                   <Loop>
@@ -5872,6 +6159,48 @@ stop
                         <Delay>0</Delay>
                         <Sound>0</Sound>
                       </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>322</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>323</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>324</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>325</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>326</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>327</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
                     </Frames>
                   </Loop>
                   <Loop>
@@ -5881,6 +6210,48 @@ stop
                       <ViewFrame>
                         <ID>0</ID>
                         <Image>84</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>328</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>329</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>330</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>331</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>332</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>333</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
@@ -6456,6 +6827,111 @@ stop
                   </Loop>
                 </Loops>
               </View>
+              <View>
+                <ID>18</ID>
+                <Name>VAleSentado</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>311</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>308</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>19</ID>
+                <Name>VSantiagoSentado</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>310</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>309</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>312</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>313</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>314</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>315</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>312</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
             </Views>
           </ViewFolder>
           <ViewFolder Name="Cursores">
@@ -6740,6 +7216,73 @@ stop
                   </Loop>
                 </Loops>
               </View>
+              <View>
+                <ID>17</ID>
+                <Name>VTV</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>301</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>302</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>303</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>304</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>305</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>306</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>307</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
             </Views>
           </ViewFolder>
         </SubFolders>
@@ -6785,8 +7328,8 @@ stop
             <SubFolders />
             <AudioClips>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music1.mp3</SourceFileName>
                 <ScriptName>aMusic1</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music1.mp3</SourceFileName>
                 <Index>1</Index>
                 <Type>2</Type>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -6797,8 +7340,8 @@ stop
                 <FileLastModifiedDate>2018-06-25 15:09:48Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music2.mp3</SourceFileName>
                 <ScriptName>aMusic2</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music2.mp3</SourceFileName>
                 <Index>2</Index>
                 <Type>2</Type>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -6809,8 +7352,8 @@ stop
                 <FileLastModifiedDate>2018-06-25 15:08:16Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music3.mp3</SourceFileName>
                 <ScriptName>aMusic3</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music3.mp3</SourceFileName>
                 <Index>3</Index>
                 <Type>2</Type>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -6821,8 +7364,8 @@ stop
                 <FileLastModifiedDate>2018-07-31 16:20:50Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music4.mp3</SourceFileName>
                 <ScriptName>aMusic4</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music4.mp3</SourceFileName>
                 <Index>5</Index>
                 <Type>2</Type>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -6845,8 +7388,8 @@ stop
             <SubFolders />
             <AudioClips>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Sound\SonidoPuerta.mp3</SourceFileName>
                 <ScriptName>aSonidoPuerta</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Sound\SonidoPuerta.mp3</SourceFileName>
                 <Index>4</Index>
                 <Type>3</Type>
                 <BundlingType>InGameEXE</BundlingType>
@@ -6878,24 +7421,24 @@ stop
     </AudioClips>
     <AudioClipTypes>
       <AudioClipType>
-        <TypeID>1</TypeID>
         <Name xml:space="preserve">Ambient Sound</Name>
+        <TypeID>1</TypeID>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <TypeID>2</TypeID>
         <Name>Music</Name>
+        <TypeID>2</TypeID>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>30</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <TypeID>3</TypeID>
         <Name>Sound</Name>
+        <TypeID>3</TypeID>
         <MaxChannels>0</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
