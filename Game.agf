@@ -2451,7 +2451,7 @@
                 <ID>7</ID>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <CursorImage>230</CursorImage>
                 <Image>229</Image>
                 <Description>Libreta</Description>
@@ -2477,6 +2477,29 @@
                 <Properties />
                 <Interactions>
                   <Event Index="0">iCelular_Look</Event>
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
+          <InventoryItemFolder Name="Del Sueño">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <ID>11</ID>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <CursorImage>342</CursorImage>
+                <Image>343</Image>
+                <Description>Tabla</Description>
+                <Name>iTabla</Name>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
                   <Event Index="1" />
                   <Event Index="2" />
                   <Event Index="3" />
@@ -4214,6 +4237,11 @@ stop
           <Type>bool</Type>
           <DefaultValue>false</DefaultValue>
         </GlobalVariable>
+        <GlobalVariable>
+          <Name>SeDioSegundoCartelTuto</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
@@ -4863,6 +4891,16 @@ stop
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\JofreDown.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="345" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraRightAgachado.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="346" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraRightAgachado2.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Cursores">
@@ -5077,6 +5115,11 @@ stop
               <Sprite Slot="244" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Celular Cursor.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="342" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tabla Cursor.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -5319,6 +5362,26 @@ stop
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Canal CNP2.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="339" Width="184" Height="141" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tabla Objeto.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="340" Width="383" Height="97" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tutorial1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="341" Width="327" Height="64" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tutorial2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="344" Width="398" Height="170" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tutorial3.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Items">
@@ -5387,6 +5450,11 @@ stop
               <Sprite Slot="245" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Celular Item.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="343" Width="65" Height="65" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tabla Item.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -6626,6 +6694,49 @@ stop
                       </Loop>
                     </Loops>
                   </View>
+                  <View>
+                    <ID>24</ID>
+                    <Name>VAleAgarra</Name>
+                    <Loops>
+                      <Loop>
+                        <ID>0</ID>
+                        <RunNextLoop>False</RunNextLoop>
+                        <Frames />
+                      </Loop>
+                      <Loop>
+                        <ID>1</ID>
+                        <RunNextLoop>False</RunNextLoop>
+                        <Frames />
+                      </Loop>
+                      <Loop>
+                        <ID>2</ID>
+                        <RunNextLoop>False</RunNextLoop>
+                        <Frames>
+                          <ViewFrame>
+                            <ID>0</ID>
+                            <Image>345</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>1</ID>
+                            <Image>346</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>2</ID>
+                            <Image>117</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                        </Frames>
+                      </Loop>
+                    </Loops>
+                  </View>
                 </Views>
               </ViewFolder>
               <ViewFolder Name="Santiago">
@@ -7749,6 +7860,13 @@ stop
                       <ViewFrame>
                         <ID>2</ID>
                         <Image>136</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>0</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
