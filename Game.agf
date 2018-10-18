@@ -668,6 +668,10 @@
                 <Number>9</Number>
                 <Description xml:space="preserve">Frente Torre Fantasma</Description>
               </UnloadedRoom>
+              <UnloadedRoom>
+                <Number>10</Number>
+                <Description xml:space="preserve">Tienda Torre Fantasma</Description>
+              </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
         </SubFolders>
@@ -679,6 +683,10 @@
           <UnloadedRoom>
             <Number>4</Number>
             <Description xml:space="preserve">Menu Inicio</Description>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>11</Number>
+            <Description>Mapa</Description>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -2812,7 +2820,7 @@
                 <ScriptName>cJofre</ScriptName>
                 <RealName xml:space="preserve">New character</RealName>
                 <NormalView>21</NormalView>
-                <SpeechView>0</SpeechView>
+                <SpeechView>10</SpeechView>
                 <IdleView>0</IdleView>
                 <ThinkingView>0</ThinkingView>
                 <BlinkingView>0</BlinkingView>
@@ -2839,7 +2847,7 @@
                 <Interactions>
                   <Event Index="0" />
                   <Event Index="1" />
-                  <Event Index="2" />
+                  <Event Index="2">cJofre_Talk</Event>
                   <Event Index="3" />
                   <Event Index="4" />
                   <Event Index="5" />
@@ -2982,14 +2990,16 @@
     <Dialogs>
       <DialogFolder Name="Main">
         <SubFolders>
-          <DialogFolder Name="DSantiago1">
-            <SubFolders />
-            <Dialogs>
-              <Dialog>
-                <ID>0</ID>
-                <Name>dSantiago1</Name>
-                <ShowTextParser>False</ShowTextParser>
-                <Script><![CDATA[// Dialog script file
+          <DialogFolder Name="Santiago">
+            <SubFolders>
+              <DialogFolder Name="DSantiago1">
+                <SubFolders />
+                <Dialogs>
+                  <Dialog>
+                    <ID>0</ID>
+                    <Name>dSantiago1</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
   
 @S  // Dialog startup entry point
  if (SantiagoDesmotivado == true)
@@ -3088,38 +3098,38 @@ return
   }
 stop
 ]]></Script>
-                <DialogOptions>
-                  <DialogOption>
+                    <DialogOptions>
+                      <DialogOption>
+                        <ID>1</ID>
+                        <Text xml:space="preserve">Sobre trabajo</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>2</ID>
+                        <Text xml:space="preserve">Sobre Santi</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>3</ID>
+                        <Text>Chiste</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>4</ID>
+                        <Text>Nada</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                    </DialogOptions>
+                  </Dialog>
+                  <Dialog>
                     <ID>1</ID>
-                    <Text xml:space="preserve">Sobre trabajo</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>2</ID>
-                    <Text xml:space="preserve">Sobre Santi</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>3</ID>
-                    <Text>Chiste</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>4</ID>
-                    <Text>Nada</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                </DialogOptions>
-              </Dialog>
-              <Dialog>
-                <ID>1</ID>
-                <Name>dTrabajoSanti</Name>
-                <ShowTextParser>False</ShowTextParser>
-                <Script><![CDATA[// Dialog script file
+                    <Name>dTrabajoSanti</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -3195,38 +3205,38 @@ goto-previous
 
 
 ]]></Script>
-                <DialogOptions>
-                  <DialogOption>
-                    <ID>1</ID>
-                    <Text xml:space="preserve">Situacion actual</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
+                    <DialogOptions>
+                      <DialogOption>
+                        <ID>1</ID>
+                        <Text xml:space="preserve">Situacion actual</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>2</ID>
+                        <Text xml:space="preserve">¿Alguna idea?</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>3</ID>
+                        <Text xml:space="preserve">Sobre el futuro</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>4</ID>
+                        <Text xml:space="preserve">Otro tema</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                    </DialogOptions>
+                  </Dialog>
+                  <Dialog>
                     <ID>2</ID>
-                    <Text xml:space="preserve">¿Alguna idea?</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>3</ID>
-                    <Text xml:space="preserve">Sobre el futuro</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>4</ID>
-                    <Text xml:space="preserve">Otro tema</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                </DialogOptions>
-              </Dialog>
-              <Dialog>
-                <ID>2</ID>
-                <Name>dSobreSanti</Name>
-                <ShowTextParser>False</ShowTextParser>
-                <Script><![CDATA[// Dialog script file
+                    <Name>dSobreSanti</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -3299,43 +3309,48 @@ goto-previous
 
 
 ]]></Script>
-                <DialogOptions>
-                  <DialogOption>
-                    <ID>1</ID>
-                    <Text xml:space="preserve">¿Quien sos?</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>2</ID>
-                    <Text xml:space="preserve">¿Lentes de sol?</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>3</ID>
-                    <Text>¿Novia?</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>4</ID>
-                    <Text xml:space="preserve">Otro tema</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                </DialogOptions>
-              </Dialog>
-            </Dialogs>
+                    <DialogOptions>
+                      <DialogOption>
+                        <ID>1</ID>
+                        <Text xml:space="preserve">¿Quien sos?</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>2</ID>
+                        <Text xml:space="preserve">¿Lentes de sol?</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>3</ID>
+                        <Text>¿Novia?</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>4</ID>
+                        <Text xml:space="preserve">Otro tema</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                    </DialogOptions>
+                  </Dialog>
+                </Dialogs>
+              </DialogFolder>
+            </SubFolders>
+            <Dialogs />
           </DialogFolder>
-          <DialogFolder Name="DAle1">
-            <SubFolders />
-            <Dialogs>
-              <Dialog>
-                <ID>3</ID>
-                <Name>dAle1</Name>
-                <ShowTextParser>False</ShowTextParser>
-                <Script><![CDATA[// Dialog script file
+          <DialogFolder Name="Ale">
+            <SubFolders>
+              <DialogFolder Name="DAle1">
+                <SubFolders />
+                <Dialogs>
+                  <Dialog>
+                    <ID>3</ID>
+                    <Name>dAle1</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
   player.FaceCharacter(cAle,eBlock);
   HablarSantiago("Ale");
@@ -3395,38 +3410,38 @@ goto-dialog 4
 stop
 
 ]]></Script>
-                <DialogOptions>
-                  <DialogOption>
-                    <ID>1</ID>
-                    <Text xml:space="preserve">¿Alguna idea?</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>2</ID>
-                    <Text xml:space="preserve">Estado de historia</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>3</ID>
-                    <Text>Simbolos</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
+                    <DialogOptions>
+                      <DialogOption>
+                        <ID>1</ID>
+                        <Text xml:space="preserve">¿Alguna idea?</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>2</ID>
+                        <Text xml:space="preserve">Estado de historia</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>3</ID>
+                        <Text>Simbolos</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>4</ID>
+                        <Text>Nada</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                    </DialogOptions>
+                  </Dialog>
+                  <Dialog>
                     <ID>4</ID>
-                    <Text>Nada</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                </DialogOptions>
-              </Dialog>
-              <Dialog>
-                <ID>4</ID>
-                <Name>dSimbolos</Name>
-                <ShowTextParser>False</ShowTextParser>
-                <Script><![CDATA[// Dialog script file
+                    <Name>dSimbolos</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -3457,40 +3472,43 @@ return
 @5
 goto-previous
 ]]></Script>
-                <DialogOptions>
-                  <DialogOption>
-                    <ID>1</ID>
-                    <Text xml:space="preserve">Extraño simbolo rojo</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>2</ID>
-                    <Text>1912</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>3</ID>
-                    <Text>Chass</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>4</ID>
-                    <Text>Boca</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>5</ID>
-                    <Text xml:space="preserve">Otro tema</Text>
-                    <Show>True</Show>
-                    <Say>False</Say>
-                  </DialogOption>
-                </DialogOptions>
-              </Dialog>
-            </Dialogs>
+                    <DialogOptions>
+                      <DialogOption>
+                        <ID>1</ID>
+                        <Text xml:space="preserve">Extraño simbolo rojo</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>2</ID>
+                        <Text>1912</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>3</ID>
+                        <Text>Chass</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>4</ID>
+                        <Text>Boca</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>5</ID>
+                        <Text xml:space="preserve">Otro tema</Text>
+                        <Show>True</Show>
+                        <Say>False</Say>
+                      </DialogOption>
+                    </DialogOptions>
+                  </Dialog>
+                </Dialogs>
+              </DialogFolder>
+            </SubFolders>
+            <Dialogs />
           </DialogFolder>
           <DialogFolder Name="DCelular">
             <SubFolders />
@@ -3687,6 +3705,137 @@ goto-previous
 stop
 ]]></Script>
                 <DialogOptions />
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+          <DialogFolder Name="Jofre">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>6</ID>
+                <Name>dJofre1</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+    if (DJofre1PrimeraVez == true) 
+    {
+      Hablar("Sargento primero Jofre, que casualidad encontrarnos por aca");
+      HablarJofre("Alejandro Festuccine y Santiago Alvarez");
+      HablarJofre("Mis fenomenos favoritos, ¿Que los trae a esta misteriosa Torre?");
+      HablarSantiago("Oimos que fallecio una joven, en el piso de arriba");
+      HablarJofre("Si tristemente, se quito la vida");
+      HablarJofre("Pero eso no lo escucharon de mi");
+      Hablar("Interesante");
+      HablarJofre("Ahora, que se les ofrece");
+      DJofre1PrimeraVez = false;
+    }
+    else 
+    {
+      Hablar("Sargento");
+      Hablar("Digame, Festuccine"); 
+    }
+
+return
+@1
+  if(DJofre1Option1SeEligio == false)
+  {
+    Hablar("Bueno, creo que ahora vamos a pasar a hacer nuestro trabajo");
+     if (cSantiago.Room == 9)
+     {
+      HablarSantiago("Si, hay par de cosas que debemos registrar asi que...");
+     }
+     HablarJofre("Jajaja");
+     if (cSantiago.Room == 9)
+     {
+       HablarJofre("Lo siento chicos, pero arriba esta Bartellone");
+       HablarJofre("Y saben lo que piensa el detective de ustedes...");
+     }
+     else
+      {
+        HablarJofre("Lo siento Festuccine,  pero arriba esta Bartellone");
+       HablarJofre("Y sabes lo que piensa el detective de vos...");
+      }
+      Hablar("Pero, si solo vamos a dar un vistaso y nos vamos");
+      HablarJofre("Ordenes son ordenes");
+        if (cSantiago.Room == 9)
+     {
+       HablarSantiago("¿Y don billetin no puede ayudar en esta situación?");
+       HablarSantiago("Guiño, guiño");
+      HablarJofre("Dudo de que tengas lo que pida");
+     }
+      Hablar("¿Pero como se entero entonces la CNP?");
+      HablarJofre("Darla, su reportera estrella esta arriba");
+      HablarJofre("Y antes de que lo preguntes, ella tiene prioridad sobre cualquier otro");
+      Hablar("Sargento, tiene que haber un modo, es SUMAMENTE NECESARIO que tengamos esta historia");
+      HablarJofre("Podrian pasar si tuvieran credenciales especiales...");
+      HablarJofre("PODRIA ayudarles a conseguirlas pero TENDRIAN si me traerme algo");
+      Hablar("Lo que sea, te lo consigo");
+      HablarJofre("Traeme, la camiseta de Boca Seniors firmada por todos los jugadores y te las doy");
+      
+      if (cSantiago.Room == 9)
+     {
+       HablarSantiago("El Santo Grial no lo queres tambien?...");
+     }
+      Hablar("Estas pidiendome algo mas alla de mis capacidades...");
+       HablarJofre("Ademas, necesito una foto carnet para ponerlas en las credenciales");
+       HablarJofre("Asi que, camiseta y fotos o se media vuelta para otro lado...");
+     
+   DJofre1Option1SeEligio = true;
+  }
+    
+  if (DJofre1Option1SeEligio == true)
+  {
+    Hablar("¿Que era lo que querias?");
+    HablarJofre("La camiseta de Boca firmada por todos sus jugadores y 1 foto carnet");
+  }
+      
+return
+@2
+return
+@3
+return
+@4
+    int NumeroRandom = Random(2);
+   if(NumeroRandom == 0)
+  {
+    HablarAle("Bueno sigo con lo mio");
+  }
+  if(NumeroRandom == 1)
+  {
+    HablarAle("Buena charla, sigo con lo mio");
+  }
+  if(NumeroRandom == 2)
+  {
+    HablarAle("Bueno era eso");
+  }
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">Entrar al departamento</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Sobre Jofre</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text />
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Text>Nada</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                </DialogOptions>
               </Dialog>
             </Dialogs>
           </DialogFolder>
@@ -4239,6 +4388,16 @@ stop
         </GlobalVariable>
         <GlobalVariable>
           <Name>SeDioSegundoCartelTuto</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>DJofre1PrimeraVez</Name>
+          <Type>bool</Type>
+          <DefaultValue>true</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>DJofre1Option1SeEligio</Name>
           <Type>bool</Type>
           <DefaultValue>false</DefaultValue>
         </GlobalVariable>
@@ -4901,6 +5060,21 @@ stop
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraRightAgachado2.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="347" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\JofreSpk1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="348" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\JofreSpk2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="349" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\JofreSpk3.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Cursores">
@@ -5380,6 +5554,11 @@ stop
               <Sprite Slot="344" Width="398" Height="170" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Tutorial3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="350" Width="70" Height="112" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Torre Objeto.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -6706,7 +6885,43 @@ stop
                       <Loop>
                         <ID>1</ID>
                         <RunNextLoop>False</RunNextLoop>
-                        <Frames />
+                        <Frames>
+                          <ViewFrame>
+                            <ID>0</ID>
+                            <Image>117</Image>
+                            <Flipped>True</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>1</ID>
+                            <Image>346</Image>
+                            <Flipped>True</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>2</ID>
+                            <Image>345</Image>
+                            <Flipped>True</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>3</ID>
+                            <Image>346</Image>
+                            <Flipped>True</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>4</ID>
+                            <Image>117</Image>
+                            <Flipped>True</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                        </Frames>
                       </Loop>
                       <Loop>
                         <ID>2</ID>
@@ -7412,6 +7627,46 @@ stop
                         <ID>3</ID>
                         <RunNextLoop>False</RunNextLoop>
                         <Frames />
+                      </Loop>
+                    </Loops>
+                  </View>
+                  <View>
+                    <ID>25</ID>
+                    <Name>VJofreSpk</Name>
+                    <Loops>
+                      <Loop>
+                        <ID>0</ID>
+                        <RunNextLoop>False</RunNextLoop>
+                        <Frames>
+                          <ViewFrame>
+                            <ID>0</ID>
+                            <Image>347</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>1</ID>
+                            <Image>348</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>2</ID>
+                            <Image>349</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>3</ID>
+                            <Image>348</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                        </Frames>
                       </Loop>
                     </Loops>
                   </View>
