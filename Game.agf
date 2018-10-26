@@ -690,7 +690,7 @@
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>12</Number>
-            <Description IsNull="True" />
+            <Description>Alefilms</Description>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -2725,7 +2725,7 @@
                 <Properties />
                 <Interactions>
                   <Event Index="0" />
-                  <Event Index="1" />
+                  <Event Index="1">cAle_Interact</Event>
                   <Event Index="2">cAle_Talk</Event>
                   <Event Index="3">cAle_UseInv</Event>
                   <Event Index="4" />
@@ -2764,8 +2764,8 @@
                 <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
                 <Properties />
                 <Interactions>
-                  <Event Index="0" />
-                  <Event Index="1" />
+                  <Event Index="0">cSantiago_Look</Event>
+                  <Event Index="1">cSantiago_Interact</Event>
                   <Event Index="2">cSantiago_Talk</Event>
                   <Event Index="3">cSantiago_UseInv</Event>
                   <Event Index="4" />
@@ -2849,8 +2849,8 @@
                 <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
                 <Properties />
                 <Interactions>
-                  <Event Index="0" />
-                  <Event Index="1" />
+                  <Event Index="0">cJofre_Look</Event>
+                  <Event Index="1">cJofre_Interact</Event>
                   <Event Index="2">cJofre_Talk</Event>
                   <Event Index="3" />
                   <Event Index="4" />
@@ -3382,7 +3382,7 @@ return
  if (D3option2SeEligio == true)
   {
  
-  HablarSantiago("La historia no avanzo");
+  HablarSantiago("¡La historia no avanzó?");
   HablarAle("Nop");
   }
   else
@@ -3795,7 +3795,12 @@ return
       
 return
 @2
-return
+  HablarAle("Quisiera hacerle unas preguntas sobre usted si no le molesta");
+  HablarJofre("Estoy de servicio, no puedo perder el tiempo");
+  Hablar("Pero es para hacerle una entrevista, usted saldra en el periodico");
+  HablarJofre("Bueno, creo que podria responder 1 o 2 preguntas ");
+  HablarJofre("Adelante");
+goto-dialog 7
 @3
 return
 @4
@@ -3836,6 +3841,124 @@ stop
                   <DialogOption>
                     <ID>4</ID>
                     <Text>Nada</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>7</ID>
+                <Name>dSobreJofre</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  if (DSobreJofreOption1SeEligio == false)
+  {
+  Hablar("¿Que me puede contar de usted?");
+  HablarJofre("Bueno, soy Sargento de la Policia Federal Argentina");
+  HablarJofre("Soy casado y tengo 2 hijos");
+  HablarJofre("Me gusta ir a la cancha y alentar a mi equipo");
+  Hablar("¿Por que policia y no otro oficio?");
+  HablarJofre("Porque podes conseguir cosas gratis...");
+  Hablar("Eso es un delito de cohecho");
+  if(DJofre1Option1SeEligio == false)
+  {
+    HablarJofre("Ya vas a venir a pedirme algo vos...");
+  }
+  else
+  {
+    HablarJofre("¿Queres que cancelemos nuestro trato?");
+    Hablar("Para nada, solo estaba divagando un poco");
+  }
+  DSobreJofreOption1SeEligio = true;
+  }
+  else
+  {
+   Hablar("¿Algo mas para la entrevista?");
+   HablarJofre("Si me gusta comer mila-pizzas con cerveza");
+   HablarJofre("Pero creo que no tengo mas nada que decir sobre mi");
+  }
+return
+@2
+  if (DSobreJofreOption2SeEligio == false)
+  {
+  Hablar("¿Cree en los fantasmas?");
+  HablarJofre("No, pero creo en los espiritus");
+  Hablar("¿Como es eso?");
+  HablarJofre("Los espiritus no se materializan sino que mueven cosas con sus poderes");
+  HablarJofre("Usted es el experto, deberia saber las diferencias");
+  Hablar("Si, si pero queria ver su nivel de ocultismo");
+   DSobreJofreOption2SeEligio = true;
+   }
+   else
+   {
+     Hablar("Tengo la sensacion de que hay un fantasma cerca");
+     HablarJofre("No se preocupe si veo alguno le aviso");
+     HablarJofre("Esta bueno saber que contamos con caza-fantasmas");
+     Hablar("Si bueno, es una de nuestras especialidades");
+   }
+return
+@3
+  Hablar("Ha visto o presenciado algo fuera de lo normal?");
+  HablarJofre("Si bueno, el otro dia tuve que tratar con un borracho");
+  if (cSantiago.Room == 9)
+     {
+       HablarSantiago("La tarea de todos los dias me imagino...");
+     }
+  HablarJofre("El tema que este era diferente");
+  HablarJofre("Decia que habia sido secuestrado por alienigenas y que habian hecho experimentos con el");
+    if (cSantiago.Room == 9)
+     {
+       HablarSantiago("¿Que clase de experimentos?");
+       HablarJofre("No me atrevi a preguntarle");
+     }
+  HablarJofre("Por lo que me dijo que estan reuniendo informacion sobre nosotros");
+  Hablar("Si es provable");
+    if (cSantiago.Room == 9)
+     {
+       HablarJofre("¿Ustedes creen en eso?");
+        HablarSantiago("Claro que si"); 
+        HablarSantiago("Si no nuestro periodico no tendria creabilidad");
+       Hablar("La ciencia nunca lo ha podido negar...");
+       Hablar("Pero principalmente porque hemos tenido contacto con aliens en el pasado...");
+      HablarJofre("Si ustedes lo dicen...");
+     }
+     else
+     {
+       HablarJofre("¿Usted que cree?");
+       Hablar("La ciencia nunca lo ha podido negar...");
+       Hablar("Hemos tenido contacto con aliens en el pasado...");
+       HablarJofre("Si vos decis...");
+     }
+option-off 3
+return
+@4
+goto-previous
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">Vida personal</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text>Fantasmas</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">Expereciencia Paranormal?</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Text xml:space="preserve">Otro tema</Text>
                     <Show>True</Show>
                     <Say>False</Say>
                   </DialogOption>
@@ -4433,6 +4556,16 @@ stop
           <Name>PuertaOficinaAbierta</Name>
           <Type>bool</Type>
           <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>DSobreJofreOption1SeEligio</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>DSobreJofreOption2SeEligio</Name>
+          <Type>bool</Type>
+          <DefaultValue>False</DefaultValue>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -5631,6 +5764,11 @@ stop
               <Sprite Slot="351" Width="218" Height="375" ColorDepth="32" Resolution="HighRes" AlphaChannel="False">
                 <Source>
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\PuertaSala.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="365" Width="286" Height="324" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Pizarron.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
