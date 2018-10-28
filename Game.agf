@@ -3017,7 +3017,7 @@
       HablarAle("Ey,¿estas deprimido o algo?");
       HablarSantiago("Tan solo desmotivado");
       HablarSantiago("Si tan solo tuviera mi cámara...");
-      HablarSantiago("En fin, ¿Qué me decias?");
+      HablarSantiago("En fin, ¿Qué me decías?");
       D1PrimeraVez = false;
      }
   }
@@ -3032,7 +3032,7 @@ return
 @1
    if (SantiagoDesmotivado == true)
    {
-   HablarAle("Queria hacerte una consulta sobre lo que deberiamos hacer...");
+   HablarAle("Quería hacerte una consulta sobre lo que deberíamos hacer...");
    HablarSantiago("No me siento con ganas de hablar de trabajo ahora mismo");
    return RUN_DIALOG_RETURN;
      }
@@ -3048,7 +3048,7 @@ goto-dialog 2
     HablarAle("¿Qué hace un vampiro con un tractor?");
     HablarSantiago("No se ");
      HablarAle("¡Sembrar el miedo!");
-     HablarSantiago("Uhh malisimo");
+     HablarSantiago("Uhh malísimo");
     D0ContadorDeChistes += 1;
     }
     else
@@ -3072,7 +3072,7 @@ goto-dialog 2
  HablarAle(" Y el hombre dice : ");
   HablarAle("- ¡Qué porquería de adivino!"); 
    D0ContadorDeChistes += 1;
-  HablarSantiago("¿No tenes nada mas que hacer?");
+  HablarSantiago("¿No tenes nada más que hacer?");
   }
   
   else 
@@ -3080,7 +3080,7 @@ goto-dialog 2
   {
     HablarAle("Entra un borracho a un bar...");
     HablarSantiago("¡No listo basta de chistes!");
-    HablarSantiago("Ni que no tuvieramos otra cosa que hacer");
+    HablarSantiago("Ni que no tuviéramos otra cosa que hacer");
     dSantiago1.SetOptionState(3,eOptionOff);
   }
   
@@ -3090,11 +3090,11 @@ return
    int NumeroRandom = Random(2);
    if(NumeroRandom == 0)
   {
-    HablarAle("Bueno sigo con lo mio");
+    HablarAle("Bueno sigo con lo mío");
   }
   if(NumeroRandom == 1)
   {
-    HablarAle("Buena charla, sigo con lo mio");
+    HablarAle("Buena charla, sigo con lo mío");
   }
   if(NumeroRandom == 2)
   {
@@ -3144,13 +3144,13 @@ return
    }
    else
    {
-  HablarAle("¿Como va el trabajo?");
-  HablarSantiago("10 puntos, nada como mirar el techo todo el dia"); 
+  HablarAle("¿Cómo va el trabajo?");
+  HablarSantiago("10 puntos, nada como mirar el techo todo el día"); 
   HablarAle("Bien, me gusta esa productividad");
-  HablarAle("¿Y de dinero como andamos?");
-  HablarSantiago("Tenemos un vacio existencial");
+  HablarAle("¿Y de dinero cómo andamos?");
+  HablarSantiago("Tenemos un vacío existencial");
   HablarSantiago("Ayer termine de pagar la factura de la tele");
-  HablarAle("¡Pero si vencio hace 2 semanas esa factura!");
+  HablarAle("¡Pero si venció hace 2 semanas esa factura!");
   HablarSantiago("Eso mismo responde a tu pregunta");
   D1option1SeEligio = true;
    }
@@ -3158,20 +3158,20 @@ return
 @2
   if (D1option2SeEligio == true)
   {
-    HablarAle("¿Por donde busco?");
-    HablarSantiago("Hoy en dia es facil enterarse de noticias");
+    HablarAle("¿Por dónde busco?");
+    HablarSantiago("Hoy en día es fácil enterarse de noticias");
     }
   else
   {
   
-  HablarAle("¿Que se te ocurre que deberiamos hacer?");
-  HablarSantiago("Y buscar por algun medio algo que podamos publicar");
-  HablarAle("¿Que tal si publicamos algo viejo como nuevo?");
+  HablarAle("¿Que se te ocurre que deberíamos hacer?");
+  HablarSantiago("Y buscar por algún medio algo que podamos publicar");
+  HablarAle("¿Qué tal si publicamos algo viejo como nuevo?");
   HablarSantiago("Puede ser...");
-  HablarSantiago("Podria ser '¡El Chupacabras ataca de nuevo!'?");
-  HablarAle("Mmmm seria la quinta vez que lo revivimos");
+  HablarSantiago("Podría ser '¡El Chupacabras ataca de nuevo!'?");
+  HablarAle("Mmmm sería la quinta vez que lo revivimos");
   HablarAle("¿Y la del OVNI?");
-  HablarSantiago("No, recorda lo que paso la ultima vez");
+  HablarSantiago("No, recorda lo que paso la última vez");
   HablarAle("¿Algo nuevo entonces?");
   HablarSantiago("Algo nuevo");
   D1option2SeEligio = true;
@@ -3180,8 +3180,8 @@ return
 @3
   if (D1option3SeEligio == true)
   {
-  HablarAle("Algun dia seremos ricos y famosos");
-  HablarSantiago("Si, claro y hasta seguro haran un videojuego sobre nosotros, ¿no?");
+  HablarAle("Algún día seremos ricos y famosos");
+  HablarSantiago("Si, claro y hasta seguro harán un videojuego sobre nosotros, ¿no?");
   player.FaceDirection(eDirectionDown,eBlock);
   cSantiago.FaceDirection(eDirectionDown,eBlock);
   Wait(40);
@@ -3191,16 +3191,16 @@ return
    else
   {
    HablarAle("¿Que pensas hacer de tu vida?");
-   HablarSantiago("¿Nos levantamos filosoficos hoy?");
-   HablarAle("Me refiero, ¿por que estas aca y hacia donde vas?");
+   HablarSantiago("¿Nos levantamos filosóficos hoy?");
+   HablarAle("Me refiero, ¿por qué estas acá y hacia dónde vas?");
    HablarSantiago("La paga no es mala, y el trabajo no es mucho");
-   HablarSantiago("Pero lo que mas quiero es poder sacar LA FOTO");
+   HablarSantiago("Pero lo que más quiero es poder sacar LA FOTO");
    HablarAle("¿Que foto?");
-   HablarSantiago("Esa que me lleve a los mejores periodicos");
-   HablarAle("Pero Santi, este es un GRAN periodico");
+   HablarSantiago("Esa que me lleve a los mejores periódicos");
+   HablarAle("Pero Santi, este es un GRAN periódico");
    HablarSantiago("Ale, no te ofendas pero  solo somos vos y yo");
-   HablarAle("Recien estamos empezando");
-   HablarSantiago("Hace mas de 10 años que seguimos igual");
+   HablarAle("Recién estamos empezando");
+   HablarSantiago("Hace más de 10 años que seguimos igual");
    D1option3SeEligio = true;
   }
 return
@@ -3212,7 +3212,7 @@ goto-previous
                     <DialogOptions>
                       <DialogOption>
                         <ID>1</ID>
-                        <Text xml:space="preserve">Situacion actual</Text>
+                        <Text xml:space="preserve">Situación actual</Text>
                         <Show>True</Show>
                         <Say>False</Say>
                       </DialogOption>
@@ -3247,30 +3247,30 @@ return
  if (D2option1SeEligio == true)
   {
   HablarAle("¿Algo nuevo que contar?");
-  HablarSantiago("Este buso que me compre brilla en la oscuridad");
+  HablarSantiago("Este buzo que me compre brilla en la oscuridad");
   HablarAle("¿En serio?");
   HablarSantiago("No");
     }
   else
   {
-  HablarAle("Si tuviera que hacerte una entrevista..");
-  HablarSantiago("A donde queres llegar?");
-  HablarAle("Pensaba que preguntas te haria, vos no sos el mas expresivo Santi");
-  HablarSantiago("¿Que queres preguntame que no sepas Ale?");
-  HablarAle("Mmm... ¿por que dejaste de estudiar ingenieria naval?");
-  HablarSantiago("No queria seguir los pasos de mi padre");
-  HablarAle("¿Por que no?");
-  HablarSantiago("Porque no queria terminar como el");
+  HablarAle("Si tuviera que hacerte una entrevista...");
+  HablarSantiago("¿A dónde queres llegar?");
+  HablarAle("Pensaba que preguntas te haría, vos no sos el más expresivo Santi");
+  HablarSantiago("¿Que queres pregúntame que no sepas Ale?");
+  HablarAle("Mmm... ¿Por qué dejaste de estudiar ingeniería naval?");
+  HablarSantiago("No quería seguir los pasos de mi padre");
+  HablarAle("¿Por qué no?");
+  HablarSantiago("Porque no quería terminar como el");
   HablarAle("¿Y hablar de tu padre como te hace sentir?");
-  HablarSantiago("¿Sos un entrevistador o un psicologo?");
-  HablarSantiago("No quiero hablar mas del tema");
+  HablarSantiago("¿Sos un entrevistador o un psicólogo?");
+  HablarSantiago("No quiero hablar más del tema");
     D2option1SeEligio = true;
   }
 return
 @2
   if (D2option2SeEligio == true)
   {
-  HablarAle("¿Como va esa fotofobia?");
+  HablarAle("¿Cómo va esa fotofobia?");
   HablarSantiago("¿No tenes otra cosa de que hablar?");
   HablarAle("Lindo gorro...");
   }
@@ -3280,7 +3280,7 @@ return
   HablarSantiago("Porque como YA te lo dije, tengo fotofobia");
   HablarAle("Que les tengas miedo a las fotos no justifica que los uses");
   HablarSantiago("FOTOFOBIA, es una enfermedad, soy sensible a la luz");
-  HablarSantiago("¡Ademas, soy FOTOGRAFO como le voy a tener miedo a las fotos!");
+  HablarSantiago("¡Además, soy FOTOGRAFO como le voy a tener miedo a las fotos!");
   HablarAle("Ah si me acorde");
   D2option2SeEligio = true;
   }
@@ -3289,11 +3289,11 @@ return
 @3
   if (D2option3SeEligio == true)
   {
-  HablarAle("Si tuvieras que elegir entre estar de novio");
-  HablarAle("Entre una zombie o una alienigena xenomorfo");
-  HablarAle("¿A quien eligirias?");
+  HablarAle("Si tuvieras que elegir una pareja…");
+  HablarAle("Entre una zombie o una alienígena ");
+  HablarAle("¿A quién elegirías?");
   HablarSantiago("A veces no me doy cuenta de la mente retorcida que tenes");
-  HablarAle("Ey, es una pregunta muy comun hoy en dia");
+  HablarAle("Ey, es una pregunta muy común hoy en día");
    }
   else
   {
@@ -3312,11 +3312,13 @@ return
 goto-previous
 
 
+
+
 ]]></Script>
                     <DialogOptions>
                       <DialogOption>
                         <ID>1</ID>
-                        <Text xml:space="preserve">¿Quien sos?</Text>
+                        <Text xml:space="preserve">¿Quién sos?</Text>
                         <Show>True</Show>
                         <Say>False</Say>
                       </DialogOption>
@@ -3365,15 +3367,15 @@ return
    if (D3option3SeEligio == true)
   {
  
-  HablarSantiago("¿Se te ocurre algo mas?");
+  HablarSantiago("¿Se te ocurre algo más?");
   HablarAle("Mmm aparte de que hacer funcionar el televisor...");
   HablarAle("No");
   }
   else
   {   
-  HablarSantiago("¿Que deberiamos hacer ahora?");
-  HablarAle("Creo que tenemos que buscar una noticia en algun lado");
-  HablarAle("Probablemente en CNP esten trasmitiendo algo");
+  HablarSantiago("¿Que deberíamos hacer ahora?");
+  HablarAle("Creo que tenemos que buscar una noticia en algún lado");
+  HablarAle("Probablemente en CNP estén trasmitiendo algo");
   HablarAle("Si tan solo funcionara el televisor...");
   D3option1SeEligio = true;
   }
@@ -3387,24 +3389,24 @@ return
   }
   else
   {
-  HablarSantiago("¿Como va nuestra proxima noticia por el momento?");
-  HablarAle("MMmm todo comenzo con sueño muy raro");
-  HablarAle("Despues de eso, no tengo nada mas, no hemos relacionado con nada todavia");
+  HablarSantiago("¿Cómo va nuestra próxima noticia por el momento?");
+  HablarAle("MMmm todo comenzó con sueño muy raro");
+  HablarAle("Despues de eso, no tengo nada más, no hemos relacionado con nada todavía");
   D3option2SeEligio = true;
   }
 return
 @3
  if (D3option3SeEligio == true)
   {
-    HablarSantiago("Sobre los simbolos...");
+    HablarSantiago("Sobre los símbolos...");
     HablarAle("Decime");
   } 
   else
   {
-   HablarSantiago("¿Que son esos simbolos que mencionaste?");
-   HablarAle("Soñe con cuatro simbolos");
-   HablarAle("Un extraño simbolo rojo, el numero 1912, las letras chass y el escudo de Boca");
-   HablarAle("¿De cual queres que te hable?"); 
+   HablarSantiago("¿Que son esos símbolos que mencionaste?");
+   HablarAle("Soñé con cuatro");
+   HablarAle("Un extraño símbolo rojo, el número 1912, las letras ‘chas’ y el escudo de Boca");
+   HablarAle("¿De cuál queres que te hable?"); 
    D3option3SeEligio = true;
   }
 goto-dialog 4
@@ -3412,6 +3414,8 @@ goto-dialog 4
 @4
   HablarSantiago("En fin");
 stop
+
+
 
 ]]></Script>
                     <DialogOptions>
@@ -3429,7 +3433,7 @@ stop
                       </DialogOption>
                       <DialogOption>
                         <ID>3</ID>
-                        <Text>Simbolos</Text>
+                        <Text>Símbolos</Text>
                         <Show>True</Show>
                         <Say>False</Say>
                       </DialogOption>
@@ -3449,28 +3453,28 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  HablarSantiago("Del extraño simbolo rojo");
-  HablarAle("Bueno, no se bien que es pero parece ser algo no muy bueno");
-  HablarAle("Ah decir verdad tendria que ver si lo he visto en algun otro lado");
+  HablarSantiago("Del extraño símbolo rojo");
+  HablarAle("Bueno, no sé bien que es pero parece ser algo no muy bueno");
+  HablarAle("Ah decir verdad tendría que ver si lo he visto en algún otro lado");
   
 return
 @2
   HablarSantiago("De 1912");
   HablarAle("La verdad es que no se");
-  HablarAle("Puede significar cualquier cosa, un año,una pagina en un libro");
+  HablarAle("Puede significar cualquier cosa, un año, una página en un libro");
 return
 @3
-  HablarSantiago("De chass");
-  HablarAle("Chass, chass, ¿donde escuche eso?");
-  HablarSantiago("¿Sera Parque Chass?");
+  HablarSantiago("De chas");
+  HablarAle("Chas, chas, ¿dónde escuche eso?");
+  HablarSantiago("¿Sera Parque Chas?");
   HablarAle("Si, puede ser");
 return
 @4
   HablarSantiago("De Boca");
   HablarAle("La verdad es que no se mucho se futbol");
   HablarAle("Pero estoy casi seguro que era el escudo de Boca Senior");
-  HablarSantiago("¿Es una premonicion?");
-  HablarAle("No lo se");
+  HablarSantiago("¿Es una premonición?");
+  HablarAle("No lo sé");
   
 return
 @5
@@ -3479,7 +3483,7 @@ goto-previous
                     <DialogOptions>
                       <DialogOption>
                         <ID>1</ID>
-                        <Text xml:space="preserve">Extraño simbolo rojo</Text>
+                        <Text xml:space="preserve">Extraño símbolo rojo</Text>
                         <Show>True</Show>
                         <Say>False</Say>
                       </DialogOption>
@@ -3491,7 +3495,7 @@ goto-previous
                       </DialogOption>
                       <DialogOption>
                         <ID>3</ID>
-                        <Text>Chass</Text>
+                        <Text>Chas</Text>
                         <Show>True</Show>
                         <Say>False</Say>
                       </DialogOption>
@@ -3541,15 +3545,15 @@ goto-previous
          gCelular.Visible = false;
          gSalirDelCelular.Visible = false;
          HablarCosa("Lo lamentamos pero usted no es un cliente de confianza para adquirir el pack premiun");
-         HablarCosa("Que tenga un buen dia");
+         HablarCosa("Que tenga un buen día");
          Hablar("¡Pero que indignante es este sistema!");
          if (player.Loop == 1)       // Si mira a la izquierda
           {
-            player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animacion para guardar el celular izq
+            player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animación para guardar el celular izq
           }
           else
           {
-            player.Animate(2, 5, eOnce, eBlock, eForwards); // Animacion para guardar el celular dere
+            player.Animate(2, 5, eOnce, eBlock, eForwards); // Animación para guardar el celular dere
           }
           player.UnlockView();
          LPantallaCelu.Text = "numero?";
@@ -3561,8 +3565,8 @@ goto-previous
            {
              gCelular.Visible = false;
              gSalirDelCelular.Visible = false;
-             HablarCosa("Su factura se encuentra al dia");
-             HablarCosa("Que tenga un buen dia");
+             HablarCosa("Su factura se encuentra al día");
+             HablarCosa("Que tenga un buen día");
                    if (player.Loop == 1)       // Si mira a la izquierda
                 {
                   player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animacion para guardar el celular izq
@@ -3578,7 +3582,7 @@ goto-previous
            else
               {
               gCelular.Visible = false;
-              HablarCosa("Su factura de television asociada a este movil se encuentra vencida");
+              HablarCosa("Su factura de televisión asociada a este móvil se encuentra vencida");
               HablarCosa("Si ya abonaste, informa el pago marcando 3");
               LPantallaCelu.Text = "1? o 2? o 3? o 4?";
               gCelular.Visible = true;
@@ -3599,16 +3603,16 @@ goto-previous
            {
              HablarCosa("Usted no registra factura vencida alguna");
              HablarCosa("Gracias por comunicarte");
-            HablarCosa("Que tenga un buen dia");
+            HablarCosa("Que tenga un buen día");
            }
            else
            {
             gCelular.Visible = false;
             gSalirDelCelular.Visible = false;
             HablarCosa("Acabamos de recibir el informe de pago");
-            HablarCosa("Su linea de television sera restaurada entre 1 segundo o 3 semanas");
+            HablarCosa("Su línea de televisión será restaurada entre 1 segundo o 3 semanas");
             HablarCosa("Gracias por comunicarte");
-            HablarCosa("Que tenga un buen dia");
+            HablarCosa("Que tenga un buen día");
             SeAvisoElPagoFactura = true;
            }
           if (player.Loop == 1)       // Si mira a la izquierda
@@ -3640,7 +3644,7 @@ goto-previous
          if (SeDioDeBaja == true)
          {
            gCelular.Visible = false;
-           HablarCosa("Su proximo reintento para darse de baja estara disponible en 2 meses"); 
+           HablarCosa("Su próximo reintento para darse de baja estará disponible en 2 meses"); 
           HablarCosa("Para adquirir el pack premiun de futbol marque 1");
            HablarCosa("Para solicitar el informe de su factura marque 2");
            HablarCosa("Para informar el pago de una factura vencida marque 3");
@@ -3675,7 +3679,7 @@ goto-previous
        {
           gCelular.Visible = false;
          HablarCosa("Para comprobar que usted no es un robot, si quiere dar de baja marque...");
-         HablarCosa("La raiz cuadrada de 100, menos 3 al cuadrado");
+         HablarCosa("La raíz cuadrada de 100, menos 3 al cuadrado");
          HablarCosa("De lo contrario apriete cualquier tecla menos el 1");
          gCelular.Visible = true;
          gSalirDelCelular.Visible = true;
@@ -3685,20 +3689,20 @@ goto-previous
           gCelular.Visible = false;
           gSalirDelCelular.Visible = false;
          HablarCosa("Hemos dado de BAJA a su servicio anterior...");
-         HablarCosa("Pero al ser nuestro cliente numero 100000, lo hemos bonificado con un nuevo servicio");
+         HablarCosa("Pero al ser nuestro cliente número 100000, lo hemos bonificado con un nuevo servicio");
          HablarCosa("Todas sus facturas vencidas fueron descartadas, ahora cuenta con 2 meses gratis bonificados");
          HablarCosa("Gracias por elegirnos");
-         HablarCosa("Que tenga un buen dia");
+         HablarCosa("Que tenga un buen día");
         SeDioDeBaja = true;
           SeAvisoElPagoFactura = true;
         
           if (player.Loop == 1)       // Si mira a la izquierda
           {
-            player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animacion para guardar el celular izq
+            player.Animate(3, 5, eOnce, eBlock, eForwards);  // Animación para guardar el celular izq
           }
           else
           {
-            player.Animate(2, 5, eOnce, eBlock, eForwards); // Animacion para guardar el celular dere
+            player.Animate(2, 5, eOnce, eBlock, eForwards); // Animación para guardar el celular dere
           }
           player.UnlockView();
          LPantallaCelu.Text = "numero?";
@@ -3723,11 +3727,11 @@ stop
 @S  // Dialog startup entry point
     if (DJofre1PrimeraVez == true) 
     {
-      Hablar("Sargento primero Jofre, que casualidad encontrarnos por aca");
+      Hablar("Sargento primero Jofre, que casualidad encontrarnos por acá");
       HablarJofre("Alejandro Festuccine y Santiago Alvarez");
-      HablarJofre("Mis fenomenos favoritos, ¿Que los trae a esta misteriosa Torre?");
-      HablarSantiago("Oimos que fallecio una joven, en el piso de arriba");
-      HablarJofre("Si tristemente, se quito la vida");
+      HablarJofre("Mis fenómenos favoritos, ¿Que los trae a esta misteriosa Torre?");
+      HablarSantiago("Oímos que falleció una joven, en el piso de arriba");
+      HablarJofre("Si lamentablemente, se quitó la vida");
       HablarJofre("Pero eso no lo escucharon de mi");
       Hablar("Interesante");
       HablarJofre("Ahora, que se les ofrece");
@@ -3736,7 +3740,7 @@ stop
     else 
     {
       Hablar("Sargento");
-      Hablar("Digame, Festuccine"); 
+      Hablar("Dígame, Festuccine"); 
     }
 
 return
@@ -3746,7 +3750,7 @@ return
     Hablar("Bueno, creo que ahora vamos a pasar a hacer nuestro trabajo");
      if (cSantiago.Room == 9)
      {
-      HablarSantiago("Si, hay par de cosas que debemos registrar asi que...");
+      HablarSantiago("Si, hay par de cosas que debemos registrar así que...");
      }
      HablarJofre("Jajaja");
      if (cSantiago.Room == 9)
@@ -3759,37 +3763,42 @@ return
         HablarJofre("Lo siento Festuccine,  pero arriba esta Bartellone");
        HablarJofre("Y sabes lo que piensa el detective de vos...");
       }
-      Hablar("Pero, si solo vamos a dar un vistaso y nos vamos");
+      Hablar("Pero, si solo vamos a dar un vistazo y nos vamos");
       HablarJofre("Ordenes son ordenes");
         if (cSantiago.Room == 9)
      {
        HablarSantiago("¿Y don billetin no puede ayudar en esta situación?");
        HablarSantiago("Guiño, guiño");
-      HablarJofre("Dudo de que tengas lo que pida");
+      HablarJofre("Con esos lentes no te estoy viendo el guiño");
      }
-      Hablar("¿Pero como se entero entonces la CNP?");
-      HablarJofre("Darla, su reportera estrella esta arriba");
+      Hablar("¿Pero cómo se enteró entonces la CNP?");
+      HablarJofre("Darla, su reportera estrella está arriba");
       HablarJofre("Y antes de que lo preguntes, ella tiene prioridad sobre cualquier otro");
       Hablar("Sargento, tiene que haber un modo, es SUMAMENTE NECESARIO que tengamos esta historia");
-      HablarJofre("Podrian pasar si tuvieran credenciales especiales...");
-      HablarJofre("PODRIA ayudarles a conseguirlas pero TENDRIAN si me traerme algo");
+      HablarJofre("Podrían pasar si tuvieran credenciales especiales...");
+      HablarJofre("Quien quiera reír tiene que hacer reír...");
+       if (cSantiago.Room == 9)
+     {
+       HablarSantiago("Si es por eso, Ale sabe unos chistes barbaros...");
+     }
+      HablarJofre("Me refiero a que podria conseguirles dichas autorizaciones...");
       Hablar("Lo que sea, te lo consigo");
-      HablarJofre("Traeme, la camiseta de Boca Seniors firmada por todos los jugadores y te las doy");
+      HablarJofre("Tráeme, la camiseta de Boca Seniors firmada por todos los jugadores y te las doy");
       
       if (cSantiago.Room == 9)
      {
-       HablarSantiago("El Santo Grial no lo queres tambien?...");
+       HablarSantiago("¿El Santo Grial no lo queres también? ");
      }
-      Hablar("Estas pidiendome algo mas alla de mis capacidades...");
-       HablarJofre("Ademas, necesito una foto carnet para ponerlas en las credenciales");
-       HablarJofre("Asi que, camiseta y fotos o se media vuelta para otro lado...");
+      Hablar("Estas pidiéndome algo más allá de mis capacidades...");
+       HablarJofre("Además, necesito una foto carnet para ponerlas en las credenciales");
+       HablarJofre("Así que, camiseta y fotos o se media vuelta para otro lado...");
      
    DJofre1Option1SeEligio = true;
   }
     
   if (DJofre1Option1SeEligio == true)
   {
-    Hablar("¿Que era lo que querias?");
+    Hablar("¿Qué era lo que querías?");
     HablarJofre("La camiseta de Boca firmada por todos sus jugadores y 1 foto carnet");
   }
       
@@ -3797,8 +3806,8 @@ return
 @2
   HablarAle("Quisiera hacerle unas preguntas sobre usted si no le molesta");
   HablarJofre("Estoy de servicio, no puedo perder el tiempo");
-  Hablar("Pero es para hacerle una entrevista, usted saldra en el periodico");
-  HablarJofre("Bueno, creo que podria responder 1 o 2 preguntas ");
+  Hablar("Pero es para hacerle una entrevista, usted saldrá en el periódico");
+  HablarJofre("Bueno, creo que podría responder 1 o 2 preguntas ");
   HablarJofre("Adelante");
 goto-dialog 7
 @3
@@ -3807,11 +3816,11 @@ return
     int NumeroRandom = Random(2);
    if(NumeroRandom == 0)
   {
-    HablarAle("Bueno sigo con lo mio");
+    HablarAle("Bueno sigo con lo mío");
   }
   if(NumeroRandom == 1)
   {
-    HablarAle("Buena charla, sigo con lo mio");
+    HablarAle("Buena charla, sigo con lo mío");
   }
   if(NumeroRandom == 2)
   {
@@ -3857,10 +3866,10 @@ return
   if (DSobreJofreOption1SeEligio == false)
   {
   Hablar("¿Que me puede contar de usted?");
-  HablarJofre("Bueno, soy Sargento de la Policia Federal Argentina");
+  HablarJofre("Bueno, soy Sargento de la Policía Federal Argentina");
   HablarJofre("Soy casado y tengo 2 hijos");
   HablarJofre("Me gusta ir a la cancha y alentar a mi equipo");
-  Hablar("¿Por que policia y no otro oficio?");
+  Hablar("¿Por qué policía y no otro oficio?");
   HablarJofre("Porque podes conseguir cosas gratis...");
   Hablar("Eso es un delito de cohecho");
   if(DJofre1Option1SeEligio == false)
@@ -3876,25 +3885,25 @@ return
   }
   else
   {
-   Hablar("¿Algo mas para la entrevista?");
+   Hablar("¿Algo más para la entrevista?");
    HablarJofre("Si me gusta comer mila-pizzas con cerveza");
-   HablarJofre("Pero creo que no tengo mas nada que decir sobre mi");
+   HablarJofre("Pero creo que no tengo más nada que decir sobre mi");
   }
 return
 @2
   if (DSobreJofreOption2SeEligio == false)
   {
   Hablar("¿Cree en los fantasmas?");
-  HablarJofre("No, pero creo en los espiritus");
-  Hablar("¿Como es eso?");
-  HablarJofre("Los espiritus no se materializan sino que mueven cosas con sus poderes");
-  HablarJofre("Usted es el experto, deberia saber las diferencias");
-  Hablar("Si, si pero queria ver su nivel de ocultismo");
+  HablarJofre("No, pero creo en los espíritus");
+  Hablar("¿Cómo es eso?");
+  HablarJofre("Los espíritus no se materializan sino que mueven cosas con sus poderes");
+  HablarJofre("Usted es el experto, debería saber las diferencias");
+  Hablar("Si, si pero quería ver su nivel de ocultismo");
    DSobreJofreOption2SeEligio = true;
    }
    else
    {
-     Hablar("Tengo la sensacion de que hay un fantasma cerca");
+     Hablar("Tengo la sensación de que hay un fantasma cerca");
      HablarJofre("No se preocupe si veo alguno le aviso");
      HablarJofre("Esta bueno saber que contamos con caza-fantasmas");
      Hablar("Si bueno, es una de nuestras especialidades");
@@ -3902,32 +3911,32 @@ return
 return
 @3
   Hablar("Ha visto o presenciado algo fuera de lo normal?");
-  HablarJofre("Si bueno, el otro dia tuve que tratar con un borracho");
+  HablarJofre("Si bueno, el otro día tuve que tratar con un borracho");
   if (cSantiago.Room == 9)
      {
-       HablarSantiago("La tarea de todos los dias me imagino...");
+       HablarSantiago("La tarea de todos los días me imagino...");
      }
   HablarJofre("El tema que este era diferente");
-  HablarJofre("Decia que habia sido secuestrado por alienigenas y que habian hecho experimentos con el");
+  HablarJofre("Decía que había sido secuestrado por alienígenas y que habían hecho experimentos con el");
     if (cSantiago.Room == 9)
      {
-       HablarSantiago("¿Que clase de experimentos?");
-       HablarJofre("No me atrevi a preguntarle");
+       HablarSantiago("¿Qué clase de experimentos?");
+       HablarJofre("No me atreví a preguntarle");
      }
-  HablarJofre("Por lo que me dijo que estan reuniendo informacion sobre nosotros");
-  Hablar("Si es provable");
+  HablarJofre("Por lo que me dijo que están reuniendo información sobre nosotros");
+  Hablar("Si es probable");
     if (cSantiago.Room == 9)
      {
        HablarJofre("¿Ustedes creen en eso?");
         HablarSantiago("Claro que si"); 
-        HablarSantiago("Si no nuestro periodico no tendria creabilidad");
+        HablarSantiago("Si no nuestro periódico no tendría credibilidad");
        Hablar("La ciencia nunca lo ha podido negar...");
        Hablar("Pero principalmente porque hemos tenido contacto con aliens en el pasado...");
       HablarJofre("Si ustedes lo dicen...");
      }
      else
      {
-       HablarJofre("¿Usted que cree?");
+       HablarJofre("¿Usted qué cree?");
        Hablar("La ciencia nunca lo ha podido negar...");
        Hablar("Hemos tenido contacto con aliens en el pasado...");
        HablarJofre("Si vos decis...");
@@ -3952,7 +3961,7 @@ goto-previous
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
-                    <Text xml:space="preserve">Expereciencia Paranormal?</Text>
+                    <Text xml:space="preserve">¿Expereciencia Paranormal?</Text>
                     <Show>True</Show>
                     <Say>False</Say>
                   </DialogOption>
