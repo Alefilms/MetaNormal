@@ -692,6 +692,10 @@
             <Number>12</Number>
             <Description>Alefilms</Description>
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>13</Number>
+            <Description>Créditos</Description>
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -5250,6 +5254,26 @@ goto-previous
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\JofreSpk3.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="373" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraSaludo1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="374" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraSaludo2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="375" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraSaludo3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="376" Width="130" Height="260" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\KaraduraSaludo4.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Cursores">
@@ -6435,6 +6459,41 @@ goto-previous
                   <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Alefilms7.png</FileName>
                 </Source>
               </Sprite>
+              <Sprite Slot="366" Width="589" Height="109" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\MetaNormal.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="367" Width="603" Height="142" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Creditos1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="368" Width="603" Height="142" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Creditos2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="369" Width="603" Height="142" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Creditos3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="370" Width="603" Height="143" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Creditos4.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="371" Width="603" Height="143" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Creditos5.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="372" Width="603" Height="143" ColorDepth="32" Resolution="HighRes" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\Alejandro\Pictures\MetaNormal\Creditos6.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
         </SubFolders>
@@ -6960,6 +7019,13 @@ goto-previous
                             <Delay>0</Delay>
                             <Sound>0</Sound>
                           </ViewFrame>
+                          <ViewFrame>
+                            <ID>13</ID>
+                            <Image>104</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
                         </Frames>
                       </Loop>
                     </Loops>
@@ -7203,6 +7269,137 @@ goto-previous
                           <ViewFrame>
                             <ID>2</ID>
                             <Image>117</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                        </Frames>
+                      </Loop>
+                    </Loops>
+                  </View>
+                  <View>
+                    <ID>29</ID>
+                    <Name>VAleSaludo</Name>
+                    <Loops>
+                      <Loop>
+                        <ID>0</ID>
+                        <RunNextLoop>False</RunNextLoop>
+                        <Frames>
+                          <ViewFrame>
+                            <ID>0</ID>
+                            <Image>373</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>1</ID>
+                            <Image>374</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>2</ID>
+                            <Image>375</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>3</ID>
+                            <Image>374</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>4</ID>
+                            <Image>376</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>5</ID>
+                            <Image>374</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>6</ID>
+                            <Image>375</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>7</ID>
+                            <Image>374</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>8</ID>
+                            <Image>376</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>9</ID>
+                            <Image>374</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>10</ID>
+                            <Image>375</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>11</ID>
+                            <Image>374</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>12</ID>
+                            <Image>376</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>13</ID>
+                            <Image>374</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>14</ID>
+                            <Image>375</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>15</ID>
+                            <Image>374</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>16</ID>
+                            <Image>376</Image>
                             <Flipped>False</Flipped>
                             <Delay>0</Delay>
                             <Sound>0</Sound>
@@ -8566,8 +8763,8 @@ goto-previous
             <SubFolders />
             <AudioClips>
               <AudioClip>
-                <ScriptName>aMusic1</ScriptName>
                 <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music1.mp3</SourceFileName>
+                <ScriptName>aMusic1</ScriptName>
                 <Index>1</Index>
                 <Type>2</Type>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -8578,8 +8775,8 @@ goto-previous
                 <FileLastModifiedDate>2018-06-25 15:09:48Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <ScriptName>aMusic2</ScriptName>
                 <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music2.mp3</SourceFileName>
+                <ScriptName>aMusic2</ScriptName>
                 <Index>2</Index>
                 <Type>2</Type>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -8590,8 +8787,8 @@ goto-previous
                 <FileLastModifiedDate>2018-06-25 15:08:16Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <ScriptName>aMusic3</ScriptName>
                 <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music3.mp3</SourceFileName>
+                <ScriptName>aMusic3</ScriptName>
                 <Index>3</Index>
                 <Type>2</Type>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -8602,8 +8799,8 @@ goto-previous
                 <FileLastModifiedDate>2018-07-31 16:20:50Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <ScriptName>aMusic4</ScriptName>
                 <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Music\Music4.mp3</SourceFileName>
+                <ScriptName>aMusic4</ScriptName>
                 <Index>5</Index>
                 <Type>2</Type>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -8626,8 +8823,8 @@ goto-previous
             <SubFolders />
             <AudioClips>
               <AudioClip>
-                <ScriptName>aSonidoPuerta</ScriptName>
                 <SourceFileName xml:space="preserve">C:\Users\Alejandro\Documents\Metanormal Corrupto\MetaNormal\Sound\SonidoPuerta.mp3</SourceFileName>
+                <ScriptName>aSonidoPuerta</ScriptName>
                 <Index>4</Index>
                 <Type>3</Type>
                 <BundlingType>InGameEXE</BundlingType>
@@ -8638,8 +8835,8 @@ goto-previous
                 <FileLastModifiedDate>2018-08-24 13:38:46Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <ScriptName>aAlefilms</ScriptName>
                 <SourceFileName xml:space="preserve">C:\Users\Alejandro\Pictures\MetaNormal\Nueva carpeta\Intro_000.mp3</SourceFileName>
+                <ScriptName>aAlefilms</ScriptName>
                 <Index>6</Index>
                 <Type>3</Type>
                 <BundlingType>InGameEXE</BundlingType>
@@ -8671,24 +8868,24 @@ goto-previous
     </AudioClips>
     <AudioClipTypes>
       <AudioClipType>
-        <Name xml:space="preserve">Ambient Sound</Name>
         <TypeID>1</TypeID>
+        <Name xml:space="preserve">Ambient Sound</Name>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <Name>Music</Name>
         <TypeID>2</TypeID>
+        <Name>Music</Name>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>30</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <Name>Sound</Name>
         <TypeID>3</TypeID>
+        <Name>Sound</Name>
         <MaxChannels>0</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
