@@ -73,7 +73,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>MetaNormal</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>6</AudioIndexer>
+      <AudioIndexer>8</AudioIndexer>
       <BuildTargets>Windows</BuildTargets>
       <RenderAtScreenResolution>UserDefined</RenderAtScreenResolution>
     </Settings>
@@ -977,7 +977,7 @@
                 <PushedImage>0</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>0</Image>
-                <Text>OPCIONES</Text>
+                <Text />
                 <Height>35</Height>
                 <Locked>True</Locked>
                 <Width>320</Width>
@@ -2856,7 +2856,7 @@
                   <Event Index="0">cJofre_Look</Event>
                   <Event Index="1">cJofre_Interact</Event>
                   <Event Index="2">cJofre_Talk</Event>
-                  <Event Index="3" />
+                  <Event Index="3">cJofre_UseInv</Event>
                   <Event Index="4" />
                   <Event Index="5" />
                   <Event Index="6" />
@@ -3293,7 +3293,7 @@ return
 @3
   if (D2option3SeEligio == true)
   {
-  HablarAle("Si tuvieras que elegir una pareja…");
+  HablarAle("Si tuvieras que elegir una pareja...");
   HablarAle("Entre una zombie o una alienígena ");
   HablarAle("¿A quién elegirías?");
   HablarSantiago("A veces no me doy cuenta de la mente retorcida que tenes");
@@ -3744,11 +3744,18 @@ stop
     else 
     {
       Hablar("Sargento");
-      Hablar("Dígame, Festuccine"); 
+      HablarJofre("Dígame, Festuccine"); 
     }
 
 return
 @1
+   
+  if (DJofre1Option1SeEligio == true)
+  {
+    Hablar("¿Qué era lo que querías?");
+    HablarJofre("La camiseta de Boca firmada por todos sus jugadores y 1 foto carnet");
+  }
+
   if(DJofre1Option1SeEligio == false)
   {
     Hablar("Bueno, creo que ahora vamos a pasar a hacer nuestro trabajo");
@@ -3795,24 +3802,28 @@ return
      }
       Hablar("Estas pidiéndome algo más allá de mis capacidades...");
        HablarJofre("Además, necesito una foto carnet para ponerlas en las credenciales");
-       HablarJofre("Así que, camiseta y fotos o se media vuelta para otro lado...");
+       HablarJofre("Así que, camiseta y fotos o media vuelta para otro lado...");
      
    DJofre1Option1SeEligio = true;
   }
     
-  if (DJofre1Option1SeEligio == true)
-  {
-    Hablar("¿Qué era lo que querías?");
-    HablarJofre("La camiseta de Boca firmada por todos sus jugadores y 1 foto carnet");
-  }
       
 return
 @2
+  if (DJofre1Option2SeEligio == true)
+  {
+    Hablar("Acerca de mi entrevista...");
+    HablarJofre("¿Si?");
+    }
+  else
+  {
   HablarAle("Quisiera hacerle unas preguntas sobre usted si no le molesta");
   HablarJofre("Estoy de servicio, no puedo perder el tiempo");
   Hablar("Pero es para hacerle una entrevista, usted saldrá en el periódico");
   HablarJofre("Bueno, creo que podría responder 1 o 2 preguntas ");
   HablarJofre("Adelante");
+  DJofre1Option2SeEligio = true;
+  }
 goto-dialog 7
 @3
 return
@@ -3914,7 +3925,7 @@ return
    }
 return
 @3
-  Hablar("Ha visto o presenciado algo fuera de lo normal?");
+  Hablar("¿Ha visto o presenciado algo fuera de lo normal?");
   HablarJofre("Si bueno, el otro día tuve que tratar con un borracho");
   if (cSantiago.Room == 9)
      {
@@ -4579,6 +4590,11 @@ goto-previous
           <Name>DSobreJofreOption2SeEligio</Name>
           <Type>bool</Type>
           <DefaultValue>False</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>DJofre1Option2SeEligio</Name>
+          <Type>bool</Type>
+          <DefaultValue>false</DefaultValue>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -7205,7 +7221,29 @@ goto-previous
                       <Loop>
                         <ID>0</ID>
                         <RunNextLoop>False</RunNextLoop>
-                        <Frames />
+                        <Frames>
+                          <ViewFrame>
+                            <ID>0</ID>
+                            <Image>117</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>1</ID>
+                            <Image>346</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>2</ID>
+                            <Image>345</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                        </Frames>
                       </Loop>
                       <Loop>
                         <ID>1</ID>
@@ -7250,6 +7288,33 @@ goto-previous
                       </Loop>
                       <Loop>
                         <ID>2</ID>
+                        <RunNextLoop>False</RunNextLoop>
+                        <Frames>
+                          <ViewFrame>
+                            <ID>0</ID>
+                            <Image>345</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>1</ID>
+                            <Image>346</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                          <ViewFrame>
+                            <ID>2</ID>
+                            <Image>117</Image>
+                            <Flipped>False</Flipped>
+                            <Delay>0</Delay>
+                            <Sound>0</Sound>
+                          </ViewFrame>
+                        </Frames>
+                      </Loop>
+                      <Loop>
+                        <ID>3</ID>
                         <RunNextLoop>False</RunNextLoop>
                         <Frames>
                           <ViewFrame>
@@ -8809,6 +8874,18 @@ goto-previous
                 <DefaultPriority>Inherit</DefaultPriority>
                 <DefaultRepeat>Inherit</DefaultRepeat>
                 <FileLastModifiedDate>2018-07-31 16:21:02Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <SourceFileName xml:space="preserve">C:\Users\Alejandro\Pictures\MetaNormal\Nueva carpeta\2018_10_30_11_38_42.mp3</SourceFileName>
+                <ScriptName>aMusic5</ScriptName>
+                <Index>8</Index>
+                <Type>2</Type>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <FileType>MP3</FileType>
+                <DefaultVolume>-1</DefaultVolume>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <FileLastModifiedDate>2018-10-30 14:37:30Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
